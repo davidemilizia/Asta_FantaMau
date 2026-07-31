@@ -1,0 +1,2997 @@
+{
+    "portieri": [
+        {
+            "nome": "AUDERO",
+            "squadra": "Como",
+            "costo": 1
+        },
+        {
+            "nome": "BIJLOW",
+            "squadra": "Genoa",
+            "costo": 20
+        },
+        {
+            "nome": "BUTEZ",
+            "squadra": "Como",
+            "costo": 32
+        },
+        {
+            "nome": "CAPRILE",
+            "squadra": "Cagliari",
+            "costo": 20
+        },
+        {
+            "nome": "CARNESECCHI",
+            "squadra": "Atalanta",
+            "costo": 34
+        },
+        {
+            "nome": "CHRISTENSEN",
+            "squadra": "Fiorentina",
+            "costo": 1
+        },
+        {
+            "nome": "CIOCCI",
+            "squadra": "Cagliari",
+            "costo": 1
+        },
+        {
+            "nome": "CONTINI",
+            "squadra": "Napoli",
+            "costo": 1
+        },
+        {
+            "nome": "CORVI",
+            "squadra": "Parma",
+            "costo": 1
+        },
+        {
+            "nome": "DAFFARA",
+            "squadra": "Parma",
+            "costo": 1
+        },
+        {
+            "nome": "DE GEA",
+            "squadra": "Fiorentina",
+            "costo": 24
+        },
+        {
+            "nome": "DESPLANCHES",
+            "squadra": "Frosinone",
+            "costo": 1
+        },
+        {
+            "nome": "DI GENNARO",
+            "squadra": "Internazionale",
+            "costo": 1
+        },
+        {
+            "nome": "DI GREGORIO",
+            "squadra": "Juventus",
+            "costo": 26
+        },
+        {
+            "nome": "FALCONE",
+            "squadra": "Lecce",
+            "costo": 17
+        },
+        {
+            "nome": "FERRANTE",
+            "squadra": "Napoli",
+            "costo": 1
+        },
+        {
+            "nome": "FRUCHTL",
+            "squadra": "Lecce",
+            "costo": 1
+        },
+        {
+            "nome": "FURLANETTO",
+            "squadra": "Lazio",
+            "costo": 1
+        },
+        {
+            "nome": "GOLLINI",
+            "squadra": "Roma",
+            "costo": 1
+        },
+        {
+            "nome": "GRANDI",
+            "squadra": "Venezia",
+            "costo": 1
+        },
+        {
+            "nome": "HAPPONEN",
+            "squadra": "Bologna",
+            "costo": 1
+        },
+        {
+            "nome": "ISRAEL",
+            "squadra": "Torino",
+            "costo": 1
+        },
+        {
+            "nome": "LEZZERINI",
+            "squadra": "Fiorentina",
+            "costo": 1
+        },
+        {
+            "nome": "LOLIC",
+            "squadra": "Frosinone",
+            "costo": 1
+        },
+        {
+            "nome": "LYSIONOK",
+            "squadra": "Genoa",
+            "costo": 1
+        },
+        {
+            "nome": "MAIGNAN",
+            "squadra": "Milan",
+            "costo": 34
+        },
+        {
+            "nome": "MANDAS",
+            "squadra": "Lazio",
+            "costo": 25
+        },
+        {
+            "nome": "MARTINEZ",
+            "squadra": "Internazionale",
+            "costo": 29
+        },
+        {
+            "nome": "MASCARDI",
+            "squadra": "Torino",
+            "costo": 1
+        },
+        {
+            "nome": "MERET",
+            "squadra": "Napoli",
+            "costo": 15
+        },
+        {
+            "nome": "MILINKOVIC SAVIC",
+            "squadra": "Napoli",
+            "costo": 29
+        },
+        {
+            "nome": "MOTTA",
+            "squadra": "Lazio",
+            "costo": 1
+        },
+        {
+            "nome": "MURIC",
+            "squadra": "Sassuolo",
+            "costo": 16
+        },
+        {
+            "nome": "OKOYE",
+            "squadra": "Udinese",
+            "costo": 17
+        },
+        {
+            "nome": "PADELLI",
+            "squadra": "Udinese",
+            "costo": 1
+        },
+        {
+            "nome": "PALEARI",
+            "squadra": "Torino",
+            "costo": 18
+        },
+        {
+            "nome": "PALMISANI",
+            "squadra": "Frosinone",
+            "costo": 12
+        },
+        {
+            "nome": "PARDEL",
+            "squadra": "Atalanta",
+            "costo": 1
+        },
+        {
+            "nome": "PERIN",
+            "squadra": "Juventus",
+            "costo": 1
+        },
+        {
+            "nome": "PESSINA",
+            "squadra": "Bologna",
+            "costo": 1
+        },
+        {
+            "nome": "PIANA",
+            "squadra": "Udinese",
+            "costo": 1
+        },
+        {
+            "nome": "PINSOGLIO",
+            "squadra": "Juventus",
+            "costo": 1
+        },
+        {
+            "nome": "PITTARELLA",
+            "squadra": "Milan",
+            "costo": 1
+        },
+        {
+            "nome": "PIZZIGNACCO",
+            "squadra": "Monza",
+            "costo": 1
+        },
+        {
+            "nome": "POZZI",
+            "squadra": "Venezia",
+            "costo": 1
+        },
+        {
+            "nome": "PROVEDEL",
+            "squadra": "Internazionale",
+            "costo": 1
+        },
+        {
+            "nome": "RAVAGLIA",
+            "squadra": "Bologna",
+            "costo": 1
+        },
+        {
+            "nome": "RINALDI",
+            "squadra": "Parma",
+            "costo": 1
+        },
+        {
+            "nome": "ROSSI",
+            "squadra": "Atalanta",
+            "costo": 1
+        },
+        {
+            "nome": "SAMOOJA",
+            "squadra": "Lecce",
+            "costo": 1
+        },
+        {
+            "nome": "SHERRI",
+            "squadra": "Cagliari",
+            "costo": 1
+        },
+        {
+            "nome": "SIVIERO",
+            "squadra": "Torino",
+            "costo": 1
+        },
+        {
+            "nome": "SKORUPSKI",
+            "squadra": "Bologna",
+            "costo": 25
+        },
+        {
+            "nome": "SOMMARIVA",
+            "squadra": "Genoa",
+            "costo": 1
+        },
+        {
+            "nome": "SPORTIELLO",
+            "squadra": "Atalanta",
+            "costo": 1
+        },
+        {
+            "nome": "STANKOVIC",
+            "squadra": "Venezia",
+            "costo": 13
+        },
+        {
+            "nome": "STRAJNAR",
+            "squadra": "Monza",
+            "costo": 1
+        },
+        {
+            "nome": "SUZUKI",
+            "squadra": "Parma",
+            "costo": 12
+        },
+        {
+            "nome": "SVILAR",
+            "squadra": "Roma",
+            "costo": 38
+        },
+        {
+            "nome": "TERRACCIANO",
+            "squadra": "Milan",
+            "costo": 1
+        },
+        {
+            "nome": "THIAM",
+            "squadra": "Monza",
+            "costo": 11
+        },
+        {
+            "nome": "TORNOVIST",
+            "squadra": "Como",
+            "costo": 1
+        },
+        {
+            "nome": "TORRIANI",
+            "squadra": "Milan",
+            "costo": 1
+        },
+        {
+            "nome": "TURATI",
+            "squadra": "Sassuolo",
+            "costo": 1
+        },
+        {
+            "nome": "VASQUEZ",
+            "squadra": "Roma",
+            "costo": 1
+        },
+        {
+            "nome": "ZACCHI",
+            "squadra": "Sassuolo",
+            "costo": 1
+        },
+        {
+            "nome": "ZELEZNY",
+            "squadra": "Roma",
+            "costo": 1
+        }
+    ],
+    "difensori": [
+        {
+            "nome": "ABANKWAH",
+            "squadra": "Udinese",
+            "costo": 1
+        },
+        {
+            "nome": "AHANOR",
+            "squadra": "Atalanta",
+            "costo": 14
+        },
+        {
+            "nome": "AKANJI",
+            "squadra": "Internazionale",
+            "costo": 32
+        },
+        {
+            "nome": "ALHASSANE",
+            "squadra": "Bologna",
+            "costo": 9
+        },
+        {
+            "nome": "AMEY",
+            "squadra": "Frosinone",
+            "costo": 5
+        },
+        {
+            "nome": "ANGELINO",
+            "squadra": "Roma",
+            "costo": 8
+        },
+        {
+            "nome": "ANTOV",
+            "squadra": "Monza",
+            "costo": 3
+        },
+        {
+            "nome": "ARIZALA",
+            "squadra": "Udinese",
+            "costo": 5
+        },
+        {
+            "nome": "ATHEKAME",
+            "squadra": "Milan",
+            "costo": 15
+        },
+        {
+            "nome": "BAKKER",
+            "squadra": "Atalanta",
+            "costo": 6
+        },
+        {
+            "nome": "BAKOUNE",
+            "squadra": "Monza",
+            "costo": 1
+        },
+        {
+            "nome": "BALBO",
+            "squadra": "Fiorentina",
+            "costo": 4
+        },
+        {
+            "nome": "BARTESAGHI",
+            "squadra": "Milan",
+            "costo": 20
+        },
+        {
+            "nome": "BASTONI",
+            "squadra": "Internazionale",
+            "costo": 35
+        },
+        {
+            "nome": "BELLA-KOTCHAP",
+            "squadra": "Venezia",
+            "costo": 10
+        },
+        {
+            "nome": "BELLANOVA",
+            "squadra": "Atalanta",
+            "costo": 24
+        },
+        {
+            "nome": "BERNASCONI",
+            "squadra": "Atalanta",
+            "costo": 19
+        },
+        {
+            "nome": "BERTOLA",
+            "squadra": "Udinese",
+            "costo": 12
+        },
+        {
+            "nome": "BEUKEMA",
+            "squadra": "Napoli",
+            "costo": 17
+        },
+        {
+            "nome": "BIRAGHI",
+            "squadra": "Torino",
+            "costo": 8
+        },
+        {
+            "nome": "BIRINDELLI",
+            "squadra": "Monza",
+            "costo": 12
+        },
+        {
+            "nome": "BISSECK",
+            "squadra": "Internazionale",
+            "costo": 28
+        },
+        {
+            "nome": "BRACAGLIA",
+            "squadra": "Frosinone",
+            "costo": 7
+        },
+        {
+            "nome": "BREMER",
+            "squadra": "Juventus",
+            "costo": 34
+        },
+        {
+            "nome": "BRITSCHGI",
+            "squadra": "Parma",
+            "costo": 8
+        },
+        {
+            "nome": "BRORSSON",
+            "squadra": "Monza",
+            "costo": 5
+        },
+        {
+            "nome": "BUONGIORNO",
+            "squadra": "Napoli",
+            "costo": 21
+        },
+        {
+            "nome": "CABAL",
+            "squadra": "Juventus",
+            "costo": 15
+        },
+        {
+            "nome": "CALVANI",
+            "squadra": "Frosinone",
+            "costo": 12
+        },
+        {
+            "nome": "CAMBIASO",
+            "squadra": "Juventus",
+            "costo": 29
+        },
+        {
+            "nome": "CANDE",
+            "squadra": "Sassuolo",
+            "costo": 8
+        },
+        {
+            "nome": "CAPOLUPO",
+            "squadra": "Monza",
+            "costo": 1
+        },
+        {
+            "nome": "CARBONI",
+            "squadra": "Monza",
+            "costo": 10
+        },
+        {
+            "nome": "CARBONI",
+            "squadra": "Parma",
+            "costo": 6
+        },
+        {
+            "nome": "CARLOS AUGUSTO",
+            "squadra": "Internazionale",
+            "costo": 24
+        },
+        {
+            "nome": "CASALE",
+            "squadra": "Bologna",
+            "costo": 6
+        },
+        {
+            "nome": "CELIK",
+            "squadra": "Juventus",
+            "costo": 19
+        },
+        {
+            "nome": "CIRCATI",
+            "squadra": "Parma",
+            "costo": 13
+        },
+        {
+            "nome": "CITTADINI",
+            "squadra": "Frosinone",
+            "costo": 6
+        },
+        {
+            "nome": "COCCHI",
+            "squadra": "Internazionale",
+            "costo": 1
+        },
+        {
+            "nome": "COCO",
+            "squadra": "Torino",
+            "costo": 16
+        },
+        {
+            "nome": "COMI",
+            "squadra": "Atalanta",
+            "costo": 1
+        },
+        {
+            "nome": "COMUZZO",
+            "squadra": "Fiorentina",
+            "costo": 19
+        },
+        {
+            "nome": "CORRADO",
+            "squadra": "Frosinone",
+            "costo": 10
+        },
+        {
+            "nome": "CORREIA",
+            "squadra": "Venezia",
+            "costo": 12
+        },
+        {
+            "nome": "CUENCA",
+            "squadra": "Como",
+            "costo": 14
+        },
+        {
+            "nome": "DE PAOLI",
+            "squadra": "Como",
+            "costo": 1
+        },
+        {
+            "nome": "DE SILVESTRI",
+            "squadra": "Bologna",
+            "costo": 5
+        },
+        {
+            "nome": "DE WINTER",
+            "squadra": "Milan",
+            "costo": 14
+        },
+        {
+            "nome": "DEL PRATO",
+            "squadra": "Parma",
+            "costo": 19
+        },
+        {
+            "nome": "DELLI CARRI",
+            "squadra": "Monza",
+            "costo": 11
+        },
+        {
+            "nome": "DI LORENZO",
+            "squadra": "Napoli",
+            "costo": 32
+        },
+        {
+            "nome": "DIMARCO",
+            "squadra": "Internazionale",
+            "costo": 43
+        },
+        {
+            "nome": "DJIMSITI",
+            "squadra": "Atalanta",
+            "costo": 20
+        },
+        {
+            "nome": "DODO",
+            "squadra": "Fiorentina",
+            "costo": 28
+        },
+        {
+            "nome": "DOEKHI",
+            "squadra": "Lazio",
+            "costo": 18
+        },
+        {
+            "nome": "DOIG",
+            "squadra": "Sassuolo",
+            "costo": 10
+        },
+        {
+            "nome": "DOSSENA",
+            "squadra": "Como",
+            "costo": 8
+        },
+        {
+            "nome": "DRAGUSIN",
+            "squadra": "Fiorentina",
+            "costo": 20
+        },
+        {
+            "nome": "EBOSSE",
+            "squadra": "Udinese",
+            "costo": 8
+        },
+        {
+            "nome": "EL AZZOUZI",
+            "squadra": "Frosinone",
+            "costo": 5
+        },
+        {
+            "nome": "ESTUPINAN",
+            "squadra": "Milan",
+            "costo": 8
+        },
+        {
+            "nome": "FORTINI",
+            "squadra": "Fiorentina",
+            "costo": 10
+        },
+        {
+            "nome": "FRANJIC",
+            "squadra": "Venezia",
+            "costo": 8
+        },
+        {
+            "nome": "GABBIA",
+            "squadra": "Milan",
+            "costo": 21
+        },
+        {
+            "nome": "GABRIEL",
+            "squadra": "Lecce",
+            "costo": 18
+        },
+        {
+            "nome": "GALASSI",
+            "squadra": "Lazio",
+            "costo": 1
+        },
+        {
+            "nome": "GALLO",
+            "squadra": "Lecce",
+            "costo": 20
+        },
+        {
+            "nome": "GASPAR",
+            "squadra": "Lecce",
+            "costo": 8
+        },
+        {
+            "nome": "GATTI",
+            "squadra": "Juventus",
+            "costo": 19
+        },
+        {
+            "nome": "GELLI",
+            "squadra": "Frosinone",
+            "costo": 7
+        },
+        {
+            "nome": "GHILARDI",
+            "squadra": "Roma",
+            "costo": 16
+        },
+        {
+            "nome": "GIGOT",
+            "squadra": "Lazio",
+            "costo": 4
+        },
+        {
+            "nome": "GILA",
+            "squadra": "Milan",
+            "costo": 22
+        },
+        {
+            "nome": "GOGLICHIDZE",
+            "squadra": "Udinese",
+            "costo": 9
+        },
+        {
+            "nome": "GOLDANIGA",
+            "squadra": "Como",
+            "costo": 8
+        },
+        {
+            "nome": "GOMES",
+            "squadra": "Venezia",
+            "costo": 5
+        },
+        {
+            "nome": "GOSENS",
+            "squadra": "Fiorentina",
+            "costo": 25
+        },
+        {
+            "nome": "GUTIERREZ",
+            "squadra": "Napoli",
+            "costo": 19
+        },
+        {
+            "nome": "HAPS",
+            "squadra": "Venezia",
+            "costo": 12
+        },
+        {
+            "nome": "HEGGEM",
+            "squadra": "Bologna",
+            "costo": 12
+        },
+        {
+            "nome": "HELLAND",
+            "squadra": "Bologna",
+            "costo": 7
+        },
+        {
+            "nome": "HERMOSO",
+            "squadra": "Roma",
+            "costo": 25
+        },
+        {
+            "nome": "HIEN",
+            "squadra": "Atalanta",
+            "costo": 25
+        },
+        {
+            "nome": "HOLM",
+            "squadra": "Bologna",
+            "costo": 21
+        },
+        {
+            "nome": "IDRISSI",
+            "squadra": "Cagliari",
+            "costo": 10
+        },
+        {
+            "nome": "IDZES",
+            "squadra": "Sassuolo",
+            "costo": 6
+        },
+        {
+            "nome": "ISMAJLI",
+            "squadra": "Torino",
+            "costo": 18
+        },
+        {
+            "nome": "JEAN",
+            "squadra": "Lecce",
+            "costo": 6
+        },
+        {
+            "nome": "JIMENEZ",
+            "squadra": "Fiorentina",
+            "costo": 21
+        },
+        {
+            "nome": "KABASELE",
+            "squadra": "Udinese",
+            "costo": 16
+        },
+        {
+            "nome": "KAIKI",
+            "squadra": "Como",
+            "costo": 14
+        },
+        {
+            "nome": "KALULU",
+            "squadra": "Juventus",
+            "costo": 31
+        },
+        {
+            "nome": "KAMARA",
+            "squadra": "Udinese",
+            "costo": 14
+        },
+        {
+            "nome": "KELLY",
+            "squadra": "Juventus",
+            "costo": 24
+        },
+        {
+            "nome": "KEMPF",
+            "squadra": "Como",
+            "costo": 27
+        },
+        {
+            "nome": "KOLASINAC",
+            "squadra": "Atalanta",
+            "costo": 12
+        },
+        {
+            "nome": "KOSPO",
+            "squadra": "Fiorentina",
+            "costo": 1
+        },
+        {
+            "nome": "KOSSOUNOU",
+            "squadra": "Atalanta",
+            "costo": 15
+        },
+        {
+            "nome": "KOUADIO",
+            "squadra": "Monza",
+            "costo": 5
+        },
+        {
+            "nome": "KOUASSI",
+            "squadra": "Lecce",
+            "costo": 5
+        },
+        {
+            "nome": "KRISTENSEN",
+            "squadra": "Udinese",
+            "costo": 19
+        },
+        {
+            "nome": "KUMBULLA",
+            "squadra": "Roma",
+            "costo": 8
+        },
+        {
+            "nome": "KUMER CELIK",
+            "squadra": "Genoa",
+            "costo": 1
+        },
+        {
+            "nome": "LAMPTEY",
+            "squadra": "Fiorentina",
+            "costo": 5
+        },
+        {
+            "nome": "LAZZARI",
+            "squadra": "Lazio",
+            "costo": 12
+        },
+        {
+            "nome": "LIGUE",
+            "squadra": "Venezia",
+            "costo": 7
+        },
+        {
+            "nome": "LUCCHESI",
+            "squadra": "Monza",
+            "costo": 6
+        },
+        {
+            "nome": "LUCUMI",
+            "squadra": "Bologna",
+            "costo": 21
+        },
+        {
+            "nome": "MANCINI",
+            "squadra": "Roma",
+            "costo": 33
+        },
+        {
+            "nome": "MANNINI",
+            "squadra": "Roma",
+            "costo": 7
+        },
+        {
+            "nome": "MARCANDALLI",
+            "squadra": "Genoa",
+            "costo": 15
+        },
+        {
+            "nome": "MARIANUCCI",
+            "squadra": "Napoli",
+            "costo": 10
+        },
+        {
+            "nome": "MARIN",
+            "squadra": "Napoli",
+            "costo": 12
+        },
+        {
+            "nome": "MARIO",
+            "squadra": "Juventus",
+            "costo": 14
+        },
+        {
+            "nome": "MARKOVIC",
+            "squadra": "Bologna",
+            "costo": 1
+        },
+        {
+            "nome": "MARTIN",
+            "squadra": "Genoa",
+            "costo": 18
+        },
+        {
+            "nome": "MARUSIC",
+            "squadra": "Lazio",
+            "costo": 20
+        },
+        {
+            "nome": "MAZZOCCHI",
+            "squadra": "Napoli",
+            "costo": 6
+        },
+        {
+            "nome": "MINA",
+            "squadra": "Cagliari",
+            "costo": 20
+        },
+        {
+            "nome": "MIRANDA",
+            "squadra": "Bologna",
+            "costo": 23
+        },
+        {
+            "nome": "MLACIC",
+            "squadra": "Udinese",
+            "costo": 3
+        },
+        {
+            "nome": "MONTERISI",
+            "squadra": "Frosinone",
+            "costo": 11
+        },
+        {
+            "nome": "MUHAREMOVIC",
+            "squadra": "Sassuolo",
+            "costo": 19
+        },
+        {
+            "nome": "MUSSOLINI",
+            "squadra": "Lazio",
+            "costo": 8
+        },
+        {
+            "nome": "NDABA",
+            "squadra": "Lecce",
+            "costo": 4
+        },
+        {
+            "nome": "NDIAYE",
+            "squadra": "Parma",
+            "costo": 7
+        },
+        {
+            "nome": "NDICKA",
+            "squadra": "Roma",
+            "costo": 30
+        },
+        {
+            "nome": "NORTON-CUFFY",
+            "squadra": "Genoa",
+            "costo": 19
+        },
+        {
+            "nome": "NUNO TAVARES",
+            "squadra": "Lazio",
+            "costo": 16
+        },
+        {
+            "nome": "OBARETIN",
+            "squadra": "Napoli",
+            "costo": 0
+        },
+        {
+            "nome": "OBERT",
+            "squadra": "Cagliari",
+            "costo": 15
+        },
+        {
+            "nome": "OBLEAC",
+            "squadra": "Frosinone",
+            "costo": 2
+        },
+        {
+            "nome": "ODENTHAL",
+            "squadra": "Sassuolo",
+            "costo": 4
+        },
+        {
+            "nome": "ODOGU",
+            "squadra": "Milan",
+            "costo": 1
+        },
+        {
+            "nome": "OLIVERA",
+            "squadra": "Napoli",
+            "costo": 17
+        },
+        {
+            "nome": "OSTIGARD",
+            "squadra": "Genoa",
+            "costo": 23
+        },
+        {
+            "nome": "OTOA",
+            "squadra": "Genoa",
+            "costo": 6
+        },
+        {
+            "nome": "OYONO",
+            "squadra": "Frosinone",
+            "costo": 12
+        },
+        {
+            "nome": "OYONO",
+            "squadra": "Frosinone",
+            "costo": 8
+        },
+        {
+            "nome": "PALMA",
+            "squadra": "Udinese",
+            "costo": 4
+        },
+        {
+            "nome": "PARISI",
+            "squadra": "Fiorentina",
+            "costo": 20
+        },
+        {
+            "nome": "PATRIC",
+            "squadra": "Lazio",
+            "costo": 11
+        },
+        {
+            "nome": "PAVARD",
+            "squadra": "Inter",
+            "costo": 20
+        },
+        {
+            "nome": "PAVLOVIC",
+            "squadra": "Milan",
+            "costo": 33
+        },
+        {
+            "nome": "PEDERSEN",
+            "squadra": "Torino",
+            "costo": 23
+        },
+        {
+            "nome": "PEDRAZA",
+            "squadra": "Lazio",
+            "costo": 17
+        },
+        {
+            "nome": "PELLEGRINI",
+            "squadra": "Lazio",
+            "costo": 10
+        },
+        {
+            "nome": "PEREZ",
+            "squadra": "Lecce",
+            "costo": 1
+        },
+        {
+            "nome": "PIERAGNOLO",
+            "squadra": "Sassuolo",
+            "costo": 6
+        },
+        {
+            "nome": "PONGRACIC",
+            "squadra": "Fiorentina",
+            "costo": 17
+        },
+        {
+            "nome": "PROVSTGAARD",
+            "squadra": "Lazio",
+            "costo": 15
+        },
+        {
+            "nome": "PUCZKA",
+            "squadra": "Genoa",
+            "costo": 8
+        },
+        {
+            "nome": "RAMON",
+            "squadra": "Como",
+            "costo": 26
+        },
+        {
+            "nome": "RANIERI",
+            "squadra": "Fiorentina",
+            "costo": 19
+        },
+        {
+            "nome": "RAVANELLI",
+            "squadra": "Monza",
+            "costo": 10
+        },
+        {
+            "nome": "RENSCH",
+            "squadra": "Roma",
+            "costo": 18
+        },
+        {
+            "nome": "RODRIGUEZ",
+            "squadra": "Cagliari",
+            "costo": 12
+        },
+        {
+            "nome": "RRAHMANI",
+            "squadra": "Napoli",
+            "costo": 25
+        },
+        {
+            "nome": "RUGANI",
+            "squadra": "Juventus",
+            "costo": 4
+        },
+        {
+            "nome": "SABELLI",
+            "squadra": "Genoa",
+            "costo": 14
+        },
+        {
+            "nome": "SAGRADO",
+            "squadra": "Venezia",
+            "costo": 8
+        },
+        {
+            "nome": "SANGARÉ",
+            "squadra": "Roma",
+            "costo": 1
+        },
+        {
+            "nome": "SCALVINI",
+            "squadra": "Atalanta",
+            "costo": 26
+        },
+        {
+            "nome": "SCHINGTIENNE",
+            "squadra": "Venezia",
+            "costo": 9
+        },
+        {
+            "nome": "SIDIBE",
+            "squadra": "Venezia",
+            "costo": 1
+        },
+        {
+            "nome": "SIEBERT",
+            "squadra": "Lecce",
+            "costo": 10
+        },
+        {
+            "nome": "SMOLCIC",
+            "squadra": "Como",
+            "costo": 18
+        },
+        {
+            "nome": "SOLET",
+            "squadra": "Udinese",
+            "costo": 30
+        },
+        {
+            "nome": "SPINAZZOLA",
+            "squadra": "Napoli",
+            "costo": 27
+        },
+        {
+            "nome": "SVERKO",
+            "squadra": "Venezia",
+            "costo": 9
+        },
+        {
+            "nome": "TERRACCIANO",
+            "squadra": "Milan",
+            "costo": 9
+        },
+        {
+            "nome": "TOMORI",
+            "squadra": "Milan",
+            "costo": 20
+        },
+        {
+            "nome": "TROILO",
+            "squadra": "Parma",
+            "costo": 13
+        },
+        {
+            "nome": "VALENTI",
+            "squadra": "Parma",
+            "costo": 9
+        },
+        {
+            "nome": "VALERI",
+            "squadra": "Parma",
+            "costo": 20
+        },
+        {
+            "nome": "VALLE",
+            "squadra": "Como",
+            "costo": 26
+        },
+        {
+            "nome": "VAN DER BREMPT",
+            "squadra": "Como",
+            "costo": 14
+        },
+        {
+            "nome": "VASQUEZ",
+            "squadra": "Genoa",
+            "costo": 21
+        },
+        {
+            "nome": "VEIGA",
+            "squadra": "Lecce",
+            "costo": 15
+        },
+        {
+            "nome": "VENTURI",
+            "squadra": "Venezia",
+            "costo": 1
+        },
+        {
+            "nome": "VIERY",
+            "squadra": "Fiorentina",
+            "costo": 14
+        },
+        {
+            "nome": "VITIK",
+            "squadra": "Bologna",
+            "costo": 13
+        },
+        {
+            "nome": "VOJVODA",
+            "squadra": "Udinese",
+            "costo": 16
+        },
+        {
+            "nome": "WALUKIEWICZ",
+            "squadra": "Sassuolo",
+            "costo": 15
+        },
+        {
+            "nome": "WESLEY",
+            "squadra": "Roma",
+            "costo": 36
+        },
+        {
+            "nome": "ZANOLI",
+            "squadra": "Udinese",
+            "costo": 8
+        },
+        {
+            "nome": "ZAPPA",
+            "squadra": "Cagliari",
+            "costo": 16
+        },
+        {
+            "nome": "ZAPPACOSTA",
+            "squadra": "Atalanta",
+            "costo": 32
+        },
+        {
+            "nome": "ZÉ PEDRO",
+            "squadra": "Cagliari",
+            "costo": 14
+        },
+        {
+            "nome": "ZEMURA",
+            "squadra": "Udinese",
+            "costo": 14
+        },
+        {
+            "nome": "ZIOLKOWSKI",
+            "squadra": "Roma",
+            "costo": 0
+        },
+        {
+            "nome": "ZORTEA",
+            "squadra": "Bologna",
+            "costo": 18
+        }
+    ],
+    "centrocampisti": [
+        {
+            "nome": "ADOPO",
+            "squadra": "Cagliari",
+            "costo": 18
+        },
+        {
+            "nome": "ADZIC",
+            "squadra": "Juventus",
+            "costo": 10
+        },
+        {
+            "nome": "AKARAKIRI",
+            "squadra": "Cagliari",
+            "costo": 4
+        },
+        {
+            "nome": "AKINSANMIRO",
+            "squadra": "Inter",
+            "costo": 7
+        },
+        {
+            "nome": "AMORIM",
+            "squadra": "Genoa",
+            "costo": 11
+        },
+        {
+            "nome": "ANGUISSA",
+            "squadra": "Napoli",
+            "costo": 33
+        },
+        {
+            "nome": "ANJORIN",
+            "squadra": "Torino",
+            "costo": 11
+        },
+        {
+            "nome": "ASLLANI",
+            "squadra": "Inter",
+            "costo": 13
+        },
+        {
+            "nome": "ATTA",
+            "squadra": "Fiorentina",
+            "costo": 39
+        },
+        {
+            "nome": "BAKOLA",
+            "squadra": "Sassuolo",
+            "costo": 9
+        },
+        {
+            "nome": "BALDANZI",
+            "squadra": "Genoa",
+            "costo": 20
+        },
+        {
+            "nome": "BALLABIO",
+            "squadra": "Monza",
+            "costo": 1
+        },
+        {
+            "nome": "BARELLA",
+            "squadra": "Internazionale",
+            "costo": 40
+        },
+        {
+            "nome": "BASIC",
+            "squadra": "Venezia",
+            "costo": 18
+        },
+        {
+            "nome": "BATURINA",
+            "squadra": "Como",
+            "costo": 44
+        },
+        {
+            "nome": "BELAHYANE",
+            "squadra": "Lazio",
+            "costo": 14
+        },
+        {
+            "nome": "BENNACER",
+            "squadra": "Milan",
+            "costo": 10
+        },
+        {
+            "nome": "BERARDI",
+            "squadra": "Venezia",
+            "costo": 0
+        },
+        {
+            "nome": "BERENBRUCH",
+            "squadra": "Internazionale",
+            "costo": 1
+        },
+        {
+            "nome": "BERISHA",
+            "squadra": "Lecce",
+            "costo": 22
+        },
+        {
+            "nome": "BERNABÈ",
+            "squadra": "Parma",
+            "costo": 29
+        },
+        {
+            "nome": "BERNARDESCHI",
+            "squadra": "Bologna",
+            "costo": 40
+        },
+        {
+            "nome": "BJARKASON",
+            "squadra": "Venezia",
+            "costo": 5
+        },
+        {
+            "nome": "BOHINEN",
+            "squadra": "Venezia",
+            "costo": 6
+        },
+        {
+            "nome": "BOLOCA",
+            "squadra": "Sassuolo",
+            "costo": 7
+        },
+        {
+            "nome": "BONDO",
+            "squadra": "Milan",
+            "costo": 12
+        },
+        {
+            "nome": "BRESCIANINI",
+            "squadra": "Fiorentina",
+            "costo": 21
+        },
+        {
+            "nome": "BUSIO",
+            "squadra": "Venezia",
+            "costo": 15
+        },
+        {
+            "nome": "CAJUSTE",
+            "squadra": "Napoli",
+            "costo": 8
+        },
+        {
+            "nome": "CALHANOGLU",
+            "squadra": "Internazionale",
+            "costo": 60
+        },
+        {
+            "nome": "CALO",
+            "squadra": "Frosinone",
+            "costo": 22
+        },
+        {
+            "nome": "CAMARA",
+            "squadra": "Udinese",
+            "costo": 1
+        },
+        {
+            "nome": "CAQUERET",
+            "squadra": "Como",
+            "costo": 35
+        },
+        {
+            "nome": "CARBONE",
+            "squadra": "Genoa",
+            "costo": 1
+        },
+        {
+            "nome": "CARBONI",
+            "squadra": "Inter",
+            "costo": 5
+        },
+        {
+            "nome": "CASADEI",
+            "squadra": "Torino",
+            "costo": 28
+        },
+        {
+            "nome": "CATALDI",
+            "squadra": "Lazio",
+            "costo": 22
+        },
+        {
+            "nome": "CHAKVETADZE",
+            "squadra": "Udinese",
+            "costo": 13
+        },
+        {
+            "nome": "CHUKWUEZE",
+            "squadra": "Milan",
+            "costo": 28
+        },
+        {
+            "nome": "CICHELLA",
+            "squadra": "Frosinone",
+            "costo": 15
+        },
+        {
+            "nome": "CISSÈ",
+            "squadra": "Milan",
+            "costo": 2
+        },
+        {
+            "nome": "CIURRIA",
+            "squadra": "Monza",
+            "costo": 11
+        },
+        {
+            "nome": "COLOMBO",
+            "squadra": "Monza",
+            "costo": 11
+        },
+        {
+            "nome": "COLPANI",
+            "squadra": "Monza",
+            "costo": 16
+        },
+        {
+            "nome": "COMPAGNON",
+            "squadra": "Venezia",
+            "costo": 9
+        },
+        {
+            "nome": "CONCEICAO",
+            "squadra": "Juventus",
+            "costo": 41
+        },
+        {
+            "nome": "COULIBALY",
+            "squadra": "Lecce",
+            "costo": 16
+        },
+        {
+            "nome": "CREMASCHI",
+            "squadra": "Parma",
+            "costo": 10
+        },
+        {
+            "nome": "CRISTANTE",
+            "squadra": "Roma",
+            "costo": 32
+        },
+        {
+            "nome": "DA CUNHA",
+            "squadra": "Como",
+            "costo": 45
+        },
+        {
+            "nome": "DAGASSO",
+            "squadra": "Venezia",
+            "costo": 6
+        },
+        {
+            "nome": "DE BRUYNE",
+            "squadra": "Napoli",
+            "costo": 44
+        },
+        {
+            "nome": "DE ROON",
+            "squadra": "Atalanta",
+            "costo": 27
+        },
+        {
+            "nome": "DEIOLA",
+            "squadra": "Cagliari",
+            "costo": 12
+        },
+        {
+            "nome": "DELE-BASHIRU",
+            "squadra": "Lazio",
+            "costo": 17
+        },
+        {
+            "nome": "DIOUF",
+            "squadra": "Internazionale",
+            "costo": 18
+        },
+        {
+            "nome": "DUNCAN",
+            "squadra": "Venezia",
+            "costo": 10
+        },
+        {
+            "nome": "EDERSON",
+            "squadra": "Atalanta",
+            "costo": 38
+        },
+        {
+            "nome": "EKKELENKAMP",
+            "squadra": "Udinese",
+            "costo": 28
+        },
+        {
+            "nome": "EL AYNAQUI",
+            "squadra": "Roma",
+            "costo": 24
+        },
+        {
+            "nome": "ELLERTSSON",
+            "squadra": "Genoa",
+            "costo": 17
+        },
+        {
+            "nome": "FABBIAN",
+            "squadra": "Fiorentina",
+            "costo": 21
+        },
+        {
+            "nome": "FADERA",
+            "squadra": "Como",
+            "costo": 20
+        },
+        {
+            "nome": "FAGIOLI",
+            "squadra": "Fiorentina",
+            "costo": 33
+        },
+        {
+            "nome": "FARJI",
+            "squadra": "Venezia",
+            "costo": 2
+        },
+        {
+            "nome": "FAZZINI",
+            "squadra": "Cagliari",
+            "costo": 18
+        },
+        {
+            "nome": "FERGUSON",
+            "squadra": "Bologna",
+            "costo": 20
+        },
+        {
+            "nome": "FOE-ONDOA",
+            "squadra": "Monza",
+            "costo": 6
+        },
+        {
+            "nome": "FOFANA",
+            "squadra": "Lecce",
+            "costo": 4
+        },
+        {
+            "nome": "FOFANA",
+            "squadra": "Milan",
+            "costo": 29
+        },
+        {
+            "nome": "FOLORUNSHO",
+            "squadra": "Napoli",
+            "costo": 22
+        },
+        {
+            "nome": "FRATTESI",
+            "squadra": "Internazionale",
+            "costo": 21
+        },
+        {
+            "nome": "FRENDRUP",
+            "squadra": "Genoa",
+            "costo": 20
+        },
+        {
+            "nome": "GAETANO",
+            "squadra": "Atalanta",
+            "costo": 19
+        },
+        {
+            "nome": "GALAZZI",
+            "squadra": "Monza",
+            "costo": 5
+        },
+        {
+            "nome": "GANDELMAN",
+            "squadra": "Lecce",
+            "costo": 20
+        },
+        {
+            "nome": "GELLI",
+            "squadra": "Frosinone",
+            "costo": 10
+        },
+        {
+            "nome": "GILMOUR",
+            "squadra": "Napoli",
+            "costo": 9
+        },
+        {
+            "nome": "GINEITIS",
+            "squadra": "Torino",
+            "costo": 23
+        },
+        {
+            "nome": "GOMEZ",
+            "squadra": "Udinese",
+            "costo": 17
+        },
+        {
+            "nome": "GORTER",
+            "squadra": "Lecce",
+            "costo": 1
+        },
+        {
+            "nome": "GROSSO",
+            "squadra": "Frosinone",
+            "costo": 6
+        },
+        {
+            "nome": "GUDMUNDSSON",
+            "squadra": "Fiorentina",
+            "costo": 40
+        },
+        {
+            "nome": "HAINAUT",
+            "squadra": "Venezia",
+            "costo": 15
+        },
+        {
+            "nome": "HASA",
+            "squadra": "Napoli",
+            "costo": 5
+        },
+        {
+            "nome": "HELGASON",
+            "squadra": "Venezia",
+            "costo": 10
+        },
+        {
+            "nome": "IANNONI",
+            "squadra": "Sassuolo",
+            "costo": 15
+        },
+        {
+            "nome": "ILIC",
+            "squadra": "Torino",
+            "costo": 14
+        },
+        {
+            "nome": "ILKHAN",
+            "squadra": "Torino",
+            "costo": 17
+        },
+        {
+            "nome": "JASHARI",
+            "squadra": "Milan",
+            "costo": 15
+        },
+        {
+            "nome": "KABA",
+            "squadra": "Lecce",
+            "costo": 6
+        },
+        {
+            "nome": "KAMATE",
+            "squadra": "Internazionale",
+            "costo": 1
+        },
+        {
+            "nome": "KARLSTROM",
+            "squadra": "Udinese",
+            "costo": 23
+        },
+        {
+            "nome": "KEITA",
+            "squadra": "Parma",
+            "costo": 20
+        },
+        {
+            "nome": "KONE",
+            "squadra": "Frosinone",
+            "costo": 9
+        },
+        {
+            "nome": "KONE",
+            "squadra": "Roma",
+            "costo": 40
+        },
+        {
+            "nome": "KONE",
+            "squadra": "Sassuolo",
+            "costo": 32
+        },
+        {
+            "nome": "KOOPMEINERS",
+            "squadra": "Juventus",
+            "costo": 25
+        },
+        {
+            "nome": "KOUDA",
+            "squadra": "Parma",
+            "costo": 1
+        },
+        {
+            "nome": "KOUTSOUPIAS",
+            "squadra": "Frosinone",
+            "costo": 16
+        },
+        {
+            "nome": "KOVAC",
+            "squadra": "Lecce",
+            "costo": 1
+        },
+        {
+            "nome": "LAFONT",
+            "squadra": "Genoa",
+            "costo": 5
+        },
+        {
+            "nome": "LAHDO",
+            "squadra": "Como",
+            "costo": 2
+        },
+        {
+            "nome": "LELLA",
+            "squadra": "Venezia",
+            "costo": 4
+        },
+        {
+            "nome": "LIBERALI",
+            "squadra": "Como",
+            "costo": 18
+        },
+        {
+            "nome": "LINDSTROM",
+            "squadra": "Napoli",
+            "costo": 15
+        },
+        {
+            "nome": "LIPANI",
+            "squadra": "Sassuolo",
+            "costo": 16
+        },
+        {
+            "nome": "LITETA",
+            "squadra": "Cagliari",
+            "costo": 4
+        },
+        {
+            "nome": "LOBOTKA",
+            "squadra": "Napoli",
+            "costo": 26
+        },
+        {
+            "nome": "LOCATELLI",
+            "squadra": "Juventus",
+            "costo": 33
+        },
+        {
+            "nome": "LOFTUS-CHEEK",
+            "squadra": "Milan",
+            "costo": 32
+        },
+        {
+            "nome": "LOVRIC",
+            "squadra": "Udinese",
+            "costo": 10
+        },
+        {
+            "nome": "LUIS HENRIQUE",
+            "squadra": "Internazionale",
+            "costo": 25
+        },
+        {
+            "nome": "LUIZ",
+            "squadra": "Juventus",
+            "costo": 22
+        },
+        {
+            "nome": "MALDINI",
+            "squadra": "Atalanta",
+            "costo": 20
+        },
+        {
+            "nome": "MALEH",
+            "squadra": "Lecce",
+            "costo": 9
+        },
+        {
+            "nome": "MANDRAGORA",
+            "squadra": "Fiorentina",
+            "costo": 30
+        },
+        {
+            "nome": "MARCHWINSKI",
+            "squadra": "Lecce",
+            "costo": 2
+        },
+        {
+            "nome": "MASINI",
+            "squadra": "Genoa",
+            "costo": 16
+        },
+        {
+            "nome": "MASSOLIN",
+            "squadra": "Inter",
+            "costo": 4
+        },
+        {
+            "nome": "MATIC",
+            "squadra": "Sassuolo",
+            "costo": 24
+        },
+        {
+            "nome": "MAZZITELLI",
+            "squadra": "Como",
+            "costo": 14
+        },
+        {
+            "nome": "MCKENNIE",
+            "squadra": "Juventus",
+            "costo": 42
+        },
+        {
+            "nome": "MCTOMINAY",
+            "squadra": "Napoli",
+            "costo": 60
+        },
+        {
+            "nome": "MEICHTRY",
+            "squadra": "Genoa",
+            "costo": 12
+        },
+        {
+            "nome": "MESSIAS",
+            "squadra": "Genoa",
+            "costo": 25
+        },
+        {
+            "nome": "MILLA",
+            "squadra": "Como",
+            "costo": 20
+        },
+        {
+            "nome": "MILLER",
+            "squadra": "Udinese",
+            "costo": 14
+        },
+        {
+            "nome": "MIRETTI",
+            "squadra": "Juventus",
+            "costo": 19
+        },
+        {
+            "nome": "MKHITARYAN",
+            "squadra": "Internazionale",
+            "costo": 33
+        },
+        {
+            "nome": "MODRIC",
+            "squadra": "Milan",
+            "costo": 43
+        },
+        {
+            "nome": "MORO",
+            "squadra": "Bologna",
+            "costo": 19
+        },
+        {
+            "nome": "MUSAH",
+            "squadra": "Milan",
+            "costo": 13
+        },
+        {
+            "nome": "NDOUR",
+            "squadra": "Fiorentina",
+            "costo": 17
+        },
+        {
+            "nome": "NGOM",
+            "squadra": "Lecce",
+            "costo": 8
+        },
+        {
+            "nome": "NICOLUSSI CAVIGLIA",
+            "squadra": "Parma",
+            "costo": 17
+        },
+        {
+            "nome": "ODGAARD",
+            "squadra": "Bologna",
+            "costo": 25
+        },
+        {
+            "nome": "ORDONEZ",
+            "squadra": "Parma",
+            "costo": 14
+        },
+        {
+            "nome": "ORISTANIO",
+            "squadra": "Torino",
+            "costo": 16
+        },
+        {
+            "nome": "ORSOLINI",
+            "squadra": "Bologna",
+            "costo": 53
+        },
+        {
+            "nome": "OULAI",
+            "squadra": "Fiorentina",
+            "costo": 20
+        },
+        {
+            "nome": "PAFUNDI",
+            "squadra": "Udinese",
+            "costo": 0
+        },
+        {
+            "nome": "PASALIC",
+            "squadra": "Atalanta",
+            "costo": 29
+        },
+        {
+            "nome": "PAYERO",
+            "squadra": "Udinese",
+            "costo": 15
+        },
+        {
+            "nome": "PAZ",
+            "squadra": "Como",
+            "costo": 59
+        },
+        {
+            "nome": "PELLEGRINI",
+            "squadra": "Roma",
+            "costo": 46
+        },
+        {
+            "nome": "PEREZ",
+            "squadra": "Venezia",
+            "costo": 17
+        },
+        {
+            "nome": "PERRONE",
+            "squadra": "Como",
+            "costo": 35
+        },
+        {
+            "nome": "PESSINA",
+            "squadra": "Monza",
+            "costo": 20
+        },
+        {
+            "nome": "PIEROTTI",
+            "squadra": "Lecce",
+            "costo": 25
+        },
+        {
+            "nome": "PIOTROWSKI",
+            "squadra": "Udinese",
+            "costo": 20
+        },
+        {
+            "nome": "PISILLI",
+            "squadra": "Roma",
+            "costo": 28
+        },
+        {
+            "nome": "POBEGA",
+            "squadra": "Bologna",
+            "costo": 20
+        },
+        {
+            "nome": "POLITANO",
+            "squadra": "Napoli",
+            "costo": 38
+        },
+        {
+            "nome": "PRATI",
+            "squadra": "Torino",
+            "costo": 18
+        },
+        {
+            "nome": "PRZYBOREK",
+            "squadra": "Lazio",
+            "costo": 7
+        },
+        {
+            "nome": "PULISIC",
+            "squadra": "Milan",
+            "costo": 57
+        },
+        {
+            "nome": "RABIOT",
+            "squadra": "Milan",
+            "costo": 46
+        },
+        {
+            "nome": "RICCI",
+            "squadra": "Milan",
+            "costo": 24
+        },
+        {
+            "nome": "ROVELLA",
+            "squadra": "Lazio",
+            "costo": 15
+        },
+        {
+            "nome": "SACO",
+            "squadra": "Napoli",
+            "costo": 1
+        },
+        {
+            "nome": "SAELEMAEKERS",
+            "squadra": "Milan",
+            "costo": 38
+        },
+        {
+            "nome": "SALA",
+            "squadra": "Lecce",
+            "costo": 10
+        },
+        {
+            "nome": "SAMARDZIC",
+            "squadra": "Atalanta",
+            "costo": 27
+        },
+        {
+            "nome": "SANTOS",
+            "squadra": "Napoli",
+            "costo": 46
+        },
+        {
+            "nome": "SOHM",
+            "squadra": "Fiorentina",
+            "costo": 17
+        },
+        {
+            "nome": "SORENSEN",
+            "squadra": "Parma",
+            "costo": 17
+        },
+        {
+            "nome": "SOTTIL",
+            "squadra": "Fiorentina",
+            "costo": 14
+        },
+        {
+            "nome": "STANKOVIC",
+            "squadra": "Inter",
+            "costo": 18
+        },
+        {
+            "nome": "SUCIC",
+            "squadra": "Internazionale",
+            "costo": 28
+        },
+        {
+            "nome": "SULEMANA",
+            "squadra": "Cagliari",
+            "costo": 13
+        },
+        {
+            "nome": "TAYLOR",
+            "squadra": "Lazio",
+            "costo": 34
+        },
+        {
+            "nome": "TERRNAVA",
+            "squadra": "Parma",
+            "costo": 1
+        },
+        {
+            "nome": "THORSTVEDT",
+            "squadra": "Sassuolo",
+            "costo": 38
+        },
+        {
+            "nome": "THURAM",
+            "squadra": "Juventus",
+            "costo": 35
+        },
+        {
+            "nome": "TOCI",
+            "squadra": "Frosinone",
+            "costo": 1
+        },
+        {
+            "nome": "TOPALOVIC",
+            "squadra": "Internazionale",
+            "costo": 1
+        },
+        {
+            "nome": "TRAORÈ",
+            "squadra": "Genoa",
+            "costo": 15
+        },
+        {
+            "nome": "VENTURINO",
+            "squadra": "Genoa",
+            "costo": 16
+        },
+        {
+            "nome": "VERGARA",
+            "squadra": "Napoli",
+            "costo": 22
+        },
+        {
+            "nome": "VLASIC",
+            "squadra": "Torino",
+            "costo": 52
+        },
+        {
+            "nome": "VOLPATO",
+            "squadra": "Sassuolo",
+            "costo": 25
+        },
+        {
+            "nome": "WIAFE",
+            "squadra": "Genoa",
+            "costo": 4
+        },
+        {
+            "nome": "WINKS",
+            "squadra": "Cagliari",
+            "costo": 13
+        },
+        {
+            "nome": "ZACCAGNI",
+            "squadra": "Lazio",
+            "costo": 41
+        },
+        {
+            "nome": "ZALEWSKI",
+            "squadra": "Atalanta",
+            "costo": 24
+        },
+        {
+            "nome": "ZANIOLO",
+            "squadra": "Udinese",
+            "costo": 48
+        },
+        {
+            "nome": "ZARRAGA",
+            "squadra": "Udinese",
+            "costo": 13
+        },
+        {
+            "nome": "ZERBIN",
+            "squadra": "Napoli",
+            "costo": 17
+        },
+        {
+            "nome": "ZEROLI",
+            "squadra": "Milan",
+            "costo": 3
+        },
+        {
+            "nome": "ZHEGROVA",
+            "squadra": "Juventus",
+            "costo": 21
+        },
+        {
+            "nome": "ZIELINSKI",
+            "squadra": "Internazionale",
+            "costo": 39
+        }
+    ],
+    "attaccanti": [
+        {
+            "nome": "ABOUKHLAL",
+            "squadra": "Torino",
+            "costo": 18
+        },
+        {
+            "nome": "ADAMS",
+            "squadra": "Torino",
+            "costo": 50
+        },
+        {
+            "nome": "ADDAI",
+            "squadra": "Como",
+            "costo": 20
+        },
+        {
+            "nome": "ADORANTE",
+            "squadra": "Venezia",
+            "costo": 24
+        },
+        {
+            "nome": "ALBARRACIN",
+            "squadra": "Cagliari",
+            "costo": 5
+        },
+        {
+            "nome": "ALMQVIST",
+            "squadra": "Parma",
+            "costo": 15
+        },
+        {
+            "nome": "ÁLVAREZ",
+            "squadra": "Sassuolo",
+            "costo": 13
+        },
+        {
+            "nome": "AMBROSINO",
+            "squadra": "Napoli",
+            "costo": 1
+        },
+        {
+            "nome": "ARENA",
+            "squadra": "Roma",
+            "costo": 3
+        },
+        {
+            "nome": "BALDÉ",
+            "squadra": "Monza",
+            "costo": 12
+        },
+        {
+            "nome": "BALENTIEN",
+            "squadra": "Milan",
+            "costo": 1
+        },
+        {
+            "nome": "BANDA",
+            "squadra": "Lecce",
+            "costo": 32
+        },
+        {
+            "nome": "BARCELLA",
+            "squadra": "Frosinone",
+            "costo": 2
+        },
+        {
+            "nome": "BAYO",
+            "squadra": "Udinese",
+            "costo": 15
+        },
+        {
+            "nome": "BELOTTI",
+            "squadra": "Cagliari",
+            "costo": 23
+        },
+        {
+            "nome": "BERARDI",
+            "squadra": "Sassuolo",
+            "costo": 48
+        },
+        {
+            "nome": "BOGA",
+            "squadra": "Juventus",
+            "costo": 36
+        },
+        {
+            "nome": "BONNY",
+            "squadra": "Internazionale",
+            "costo": 32
+        },
+        {
+            "nome": "BORRELLI",
+            "squadra": "Cagliari",
+            "costo": 24
+        },
+        {
+            "nome": "BRASCHI",
+            "squadra": "Fiorentina",
+            "costo": 1
+        },
+        {
+            "nome": "BRAVO",
+            "squadra": "Udinese",
+            "costo": 15
+        },
+        {
+            "nome": "BUKSA",
+            "squadra": "Udinese",
+            "costo": 20
+        },
+        {
+            "nome": "BURNETE",
+            "squadra": "Lecce",
+            "costo": 2
+        },
+        {
+            "nome": "CAMARDA",
+            "squadra": "Milan",
+            "costo": 10
+        },
+        {
+            "nome": "CAMBIAGHI",
+            "squadra": "Bologna",
+            "costo": 28
+        },
+        {
+            "nome": "CANCELLIERI",
+            "squadra": "Lazio",
+            "costo": 19
+        },
+        {
+            "nome": "CASAS",
+            "squadra": "Venezia",
+            "costo": 12
+        },
+        {
+            "nome": "CASTRO",
+            "squadra": "Bologna",
+            "costo": 57
+        },
+        {
+            "nome": "CHEDDIRA",
+            "squadra": "Napoli",
+            "costo": 19
+        },
+        {
+            "nome": "CICHERO",
+            "squadra": "Frosinone",
+            "costo": 2
+        },
+        {
+            "nome": "COLLEY",
+            "squadra": "Frosinone",
+            "costo": 1
+        },
+        {
+            "nome": "COLOMBO",
+            "squadra": "Genoa",
+            "costo": 36
+        },
+        {
+            "nome": "CUTRONE",
+            "squadra": "Monza",
+            "costo": 24
+        },
+        {
+            "nome": "DALLINGA",
+            "squadra": "Bologna",
+            "costo": 24
+        },
+        {
+            "nome": "DAVID",
+            "squadra": "Juventus",
+            "costo": 50
+        },
+        {
+            "nome": "DAVIS",
+            "squadra": "Udinese",
+            "costo": 61
+        },
+        {
+            "nome": "DE KETELAERE",
+            "squadra": "Atalanta",
+            "costo": 40
+        },
+        {
+            "nome": "DIA",
+            "squadra": "Lazio",
+            "costo": 21
+        },
+        {
+            "nome": "DIAO",
+            "squadra": "Como",
+            "costo": 30
+        },
+        {
+            "nome": "DOMINGUEZ",
+            "squadra": "Bologna",
+            "costo": 18
+        },
+        {
+            "nome": "DOUVIKAS",
+            "squadra": "Como",
+            "costo": 65
+        },
+        {
+            "nome": "DOVBYK",
+            "squadra": "Roma",
+            "costo": 20
+        },
+        {
+            "nome": "DYBALA",
+            "squadra": "Roma",
+            "costo": 50
+        },
+        {
+            "nome": "EKHATOR",
+            "squadra": "Juventus",
+            "costo": 20
+        },
+        {
+            "nome": "EL AZZOUZI",
+            "squadra": "Bologna",
+            "costo": 8
+        },
+        {
+            "nome": "ELPHEGE",
+            "squadra": "Parma",
+            "costo": 22
+        },
+        {
+            "nome": "ESPOSITO",
+            "squadra": "Cagliari",
+            "costo": 40
+        },
+        {
+            "nome": "ESPOSITO",
+            "squadra": "Internazionale",
+            "costo": 40
+        },
+        {
+            "nome": "FELICI",
+            "squadra": "Cagliari",
+            "costo": 9
+        },
+        {
+            "nome": "FILA",
+            "squadra": "Venezia",
+            "costo": 9
+        },
+        {
+            "nome": "FINI",
+            "squadra": "Frosinone",
+            "costo": 10
+        },
+        {
+            "nome": "FORSON",
+            "squadra": "Monza",
+            "costo": 3
+        },
+        {
+            "nome": "FRIGAN",
+            "squadra": "Parma",
+            "costo": 10
+        },
+        {
+            "nome": "GHEDJEMIS",
+            "squadra": "Frosinone",
+            "costo": 25
+        },
+        {
+            "nome": "GIMENEZ",
+            "squadra": "Milan",
+            "costo": 22
+        },
+        {
+            "nome": "GIOVANE",
+            "squadra": "Napoli",
+            "costo": 25
+        },
+        {
+            "nome": "GORI",
+            "squadra": "Frosinone",
+            "costo": 1
+        },
+        {
+            "nome": "GUEYE",
+            "squadra": "Udinese",
+            "costo": 15
+        },
+        {
+            "nome": "HAVEL",
+            "squadra": "Genoa",
+            "costo": 21
+        },
+        {
+            "nome": "HOJLUND",
+            "squadra": "Napoli",
+            "costo": 78
+        },
+        {
+            "nome": "ISAKSEN",
+            "squadra": "Lazio",
+            "costo": 26
+        },
+        {
+            "nome": "JOVIC",
+            "squadra": "Lecce",
+            "costo": 1
+        },
+        {
+            "nome": "KARLSSON",
+            "squadra": "Bologna",
+            "costo": 9
+        },
+        {
+            "nome": "KEAN",
+            "squadra": "Fiorentina",
+            "costo": 64
+        },
+        {
+            "nome": "KRSTOVIC",
+            "squadra": "Atalanta",
+            "costo": 56
+        },
+        {
+            "nome": "KUHN",
+            "squadra": "Como",
+            "costo": 20
+        },
+        {
+            "nome": "KULENOVIC",
+            "squadra": "Torino",
+            "costo": 17
+        },
+        {
+            "nome": "KVERNADZE",
+            "squadra": "Frosinone",
+            "costo": 18
+        },
+        {
+            "nome": "LANG",
+            "squadra": "Napoli",
+            "costo": 35
+        },
+        {
+            "nome": "LAUBERBACH",
+            "squadra": "Venezia",
+            "costo": 6
+        },
+        {
+            "nome": "LAURIENTÉ",
+            "squadra": "Sassuolo",
+            "costo": 46
+        },
+        {
+            "nome": "LAVELLI",
+            "squadra": "Internazionale",
+            "costo": 1
+        },
+        {
+            "nome": "LEAO",
+            "squadra": "Milan",
+            "costo": 65
+        },
+        {
+            "nome": "LISMAN",
+            "squadra": "Venezia",
+            "costo": 10
+        },
+        {
+            "nome": "LOUBAO",
+            "squadra": "Monza",
+            "costo": 3
+        },
+        {
+            "nome": "LUCCA",
+            "squadra": "Napoli",
+            "costo": 28
+        },
+        {
+            "nome": "LUKAKU",
+            "squadra": "Napoli",
+            "costo": 35
+        },
+        {
+            "nome": "MALEN",
+            "squadra": "Roma",
+            "costo": 84
+        },
+        {
+            "nome": "MARTINEZ",
+            "squadra": "Internazionale",
+            "costo": 88
+        },
+        {
+            "nome": "MARTINS",
+            "squadra": "Monza",
+            "costo": 3
+        },
+        {
+            "nome": "MENDY",
+            "squadra": "Cagliari",
+            "costo": 5
+        },
+        {
+            "nome": "MILIK",
+            "squadra": "Juventus",
+            "costo": 10
+        },
+        {
+            "nome": "MODESTO",
+            "squadra": "Udinese",
+            "costo": 5
+        },
+        {
+            "nome": "MORATA",
+            "squadra": "Como",
+            "costo": 18
+        },
+        {
+            "nome": "MORO",
+            "squadra": "Sassuolo",
+            "costo": 10
+        },
+        {
+            "nome": "MOSCONI",
+            "squadra": "Internazionale",
+            "costo": 1
+        },
+        {
+            "nome": "MOTA",
+            "squadra": "Monza",
+            "costo": 19
+        },
+        {
+            "nome": "N'DRI",
+            "squadra": "Lecce",
+            "costo": 17
+        },
+        {
+            "nome": "NERES",
+            "squadra": "Napoli",
+            "costo": 42
+        },
+        {
+            "nome": "NGONGE",
+            "squadra": "Napoli",
+            "costo": 18
+        },
+        {
+            "nome": "NJIE",
+            "squadra": "Torino",
+            "costo": 20
+        },
+        {
+            "nome": "NKUNKU",
+            "squadra": "Milan",
+            "costo": 49
+        },
+        {
+            "nome": "NOSLIN",
+            "squadra": "Lazio",
+            "costo": 23
+        },
+        {
+            "nome": "NZOLA",
+            "squadra": "Fiorentina",
+            "costo": 20
+        },
+        {
+            "nome": "OKORO",
+            "squadra": "Venezia",
+            "costo": 7
+        },
+        {
+            "nome": "ONDREJKA",
+            "squadra": "Parma",
+            "costo": 18
+        },
+        {
+            "nome": "OPENDA",
+            "squadra": "Juventus",
+            "costo": 23
+        },
+        {
+            "nome": "PELLEGRINO",
+            "squadra": "Parma",
+            "costo": 48
+        },
+        {
+            "nome": "PETAGNA",
+            "squadra": "Monza",
+            "costo": 20
+        },
+        {
+            "nome": "PICCOLI",
+            "squadra": "Fiorentina",
+            "costo": 26
+        },
+        {
+            "nome": "PINAMONTI",
+            "squadra": "Sassuolo",
+            "costo": 54
+        },
+        {
+            "nome": "RAIMONDO",
+            "squadra": "Frosinone",
+            "costo": 23
+        },
+        {
+            "nome": "RAMOS",
+            "squadra": "Milan",
+            "costo": 78
+        },
+        {
+            "nome": "RAO",
+            "squadra": "Napoli",
+            "costo": 1
+        },
+        {
+            "nome": "RASPADORI",
+            "squadra": "Atalanta",
+            "costo": 42
+        },
+        {
+            "nome": "RATKOV",
+            "squadra": "Lazio",
+            "costo": 20
+        },
+        {
+            "nome": "RODRIGUEZ",
+            "squadra": "Como",
+            "costo": 40
+        },
+        {
+            "nome": "ROWE",
+            "squadra": "Bologna",
+            "costo": 40
+        },
+        {
+            "nome": "RRAHMANI",
+            "squadra": "Venezia",
+            "costo": 10
+        },
+        {
+            "nome": "SCAMACCA",
+            "squadra": "Atalanta",
+            "costo": 60
+        },
+        {
+            "nome": "SIMEONE",
+            "squadra": "Torino",
+            "costo": 57
+        },
+        {
+            "nome": "SOULÉ",
+            "squadra": "Roma",
+            "costo": 56
+        },
+        {
+            "nome": "SPINACCÈ",
+            "squadra": "Internazionale",
+            "costo": 1
+        },
+        {
+            "nome": "STULIC",
+            "squadra": "Lecce",
+            "costo": 29
+        },
+        {
+            "nome": "SULEMANA",
+            "squadra": "Atalanta",
+            "costo": 23
+        },
+        {
+            "nome": "THURAM",
+            "squadra": "Internazionale",
+            "costo": 74
+        },
+        {
+            "nome": "TOURÉ",
+            "squadra": "Atalanta",
+            "costo": 13
+        },
+        {
+            "nome": "TREPY",
+            "squadra": "Cagliari",
+            "costo": 4
+        },
+        {
+            "nome": "VAZ",
+            "squadra": "Roma",
+            "costo": 20
+        },
+        {
+            "nome": "VIGLIOTTI",
+            "squadra": "Napoli",
+            "costo": 1
+        },
+        {
+            "nome": "VINCIATI",
+            "squadra": "Udinese",
+            "costo": 1
+        },
+        {
+            "nome": "VÍTINHA",
+            "squadra": "Genoa",
+            "costo": 31
+        },
+        {
+            "nome": "YEBOAH",
+            "squadra": "Venezia",
+            "costo": 24
+        },
+        {
+            "nome": "YILDIZ",
+            "squadra": "Juventus",
+            "costo": 70
+        },
+        {
+            "nome": "ZAPATA",
+            "squadra": "Torino",
+            "costo": 43
+        }
+    ],
+    "allenatori": [
+        {
+            "nome": "ABATE",
+            "squadra": "Torino",
+            "costo": 18
+        },
+        {
+            "nome": "ALLEGRI",
+            "squadra": "Napoli",
+            "costo": 26
+        },
+        {
+            "nome": "ALVINI",
+            "squadra": "Frosinone",
+            "costo": 10
+        },
+        {
+            "nome": "AMORIM",
+            "squadra": "Milan",
+            "costo": 23
+        },
+        {
+            "nome": "AQUILANI",
+            "squadra": "Sassuolo",
+            "costo": 18
+        },
+        {
+            "nome": "CHIVU",
+            "squadra": "Inter",
+            "costo": 30
+        },
+        {
+            "nome": "CUESTA",
+            "squadra": "Parma",
+            "costo": 15
+        },
+        {
+            "nome": "DE ROSSI",
+            "squadra": "Genoa",
+            "costo": 17
+        },
+        {
+            "nome": "DI FRANCESCO",
+            "squadra": "Lecce",
+            "costo": 10
+        },
+        {
+            "nome": "FABREGAS",
+            "squadra": "Como",
+            "costo": 25
+        },
+        {
+            "nome": "GASPERINI",
+            "squadra": "Roma",
+            "costo": 26
+        },
+        {
+            "nome": "Gattuso",
+            "squadra": "Lazio",
+            "costo": 19
+        },
+        {
+            "nome": "GROSSO",
+            "squadra": "Fiorentina",
+            "costo": 19
+        },
+        {
+            "nome": "JURIC",
+            "squadra": "Monza",
+            "costo": 13
+        },
+        {
+            "nome": "PISACANE",
+            "squadra": "Cagliari",
+            "costo": 14
+        },
+        {
+            "nome": "RUNJAIC",
+            "squadra": "Udinese",
+            "costo": 17
+        },
+        {
+            "nome": "SARRI",
+            "squadra": "Atalanta",
+            "costo": 21
+        },
+        {
+            "nome": "SPALLETTI",
+            "squadra": "Juventus",
+            "costo": 24
+        },
+        {
+            "nome": "STROPPA",
+            "squadra": "Venezia",
+            "costo": 12
+        },
+        {
+            "nome": "TEDESCO",
+            "squadra": "Bologna",
+            "costo": 18
+        }
+    ]
+}
