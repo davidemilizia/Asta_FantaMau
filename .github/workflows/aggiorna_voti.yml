@@ -1,12 +1,13 @@
-name: Aggiorna Voti
+name: Aggiorna Voti Automaticamente
 
 on:
   workflow_dispatch:
-    inputs:
-      giornata:
-        description: "Numero giornata"
-        required: true
-        default: "1"
+
+  schedule:
+    - cron: '0 6 * * *'
+    - cron: '0 12 * * *'
+    - cron: '0 18 * * *'
+    - cron: '0 23 * * *'
 
 jobs:
   aggiorna:
@@ -33,11 +34,15 @@ jobs:
         run: |
           mkdir -p dati_giornate
 
-      - name: Genera CSV giornata
+      - name: Aggiorna tutte le giornate
         run: |
-          python aggiorna_voti.py "${{ github.event.inputs.giornata }}"
+          for i in $(seq 1 38)
+          do
+            echo "Aggiorno giornata $i"
+            python aggiorna_voti.py "$i"
+          done
 
-      - name: Verifica file creato
+      - name: Verifica file creati
         run: |
           ls -la dati_giornate
 
@@ -48,9 +53,9 @@ jobs:
 
           git add dati_giornate/*.csv
 
-          git diff --staged --quiet && echo "Nessuna modifica" && exit 0
+          git diff --staged --quiet && echo "Nessuna modifica trovata" && exit 0
 
-          git commit -m "Aggiornamento voti giornata ${{ github.event.inputs.giornata }}"
+          git commit -m "Aggiornamento automatico voti"
 
           git pull --rebase origin main
 
