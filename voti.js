@@ -13,11 +13,11 @@ async function importaVotiFantapiu(giornata) {
     // 1. Invia il comando a GitHub Actions per avviare il download della giornata desiderata
     const dispatchResponse = await fetch(`https://api.github.com/repos/${OWNER}/${REPO}/actions/workflows/aggiorna_voti.yml/dispatches`, {
       method: 'POST',
-      headers: {
-        'Accept': 'application/vnd.github+json',
-        'Authorization': `Bearer ${TOKEN}`,
-        'X-GitHub-Api-Version': '2022-11-28'
-      },
+     headers: {
+      'Accept': 'application/vnd.github+json',
+      'Authorization': `token ${TOKEN}`,
+      'X-GitHub-Api-Version': '2022-11-28'
+    },
       body: JSON.stringify({
         ref: 'main',
         inputs: {
