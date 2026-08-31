@@ -8,9 +8,10 @@ async function importaVotiFantapiu(giornata) {
 
         const timestamp = Date.now();
 
-        const response = await fetch(
-            `./giornata_${giornata}.csv?t=${timestamp}`
-        );
+       const response = await fetch(
+    `./dati_giornate/giornata_${giornata}.csv?t=${timestamp}`
+);
+``;
 
         if (!response.ok) {
             throw new Error(
