@@ -1,10 +1,45 @@
 /**
- * Legge il file CSV della giornata provando sia nella root che nella cartella dati_giornate
+ * Scarica i voti della giornata invocando l'Action di GitHub dal sito web
  */
 async function importaVotiFantapiu(giornata) {
-  // Aggiungiamo il timestamp ?t= per forzare l'aggiornamento senza cache del browser
+  // CONFIGURAZIONE GITHUB (Metti qui il tuo token generato su GitHub)
+  const TOKEN = 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; 
+  const OWNER = 'davidemilitia';
+  const REPO = 'Asta_FantaMau';
+
+  try {
+    console.log(`Richiesta aggiornamento voti inviata a GitHub per la Giornata ${giornata}...`);
+
+    // 1. Invia il comando a GitHub Actions per avviare il download della giornata desiderata
+    const dispatchResponse = await fetch(`https://api.github.com/repos/${OWNER}/${REPO}/actions/workflows/aggiorna_voti.yml/dispatches`, {
+      method: 'POST',
+      headers: {
+        'Accept': 'application/vnd.github+json',
+        'Authorization': `Bearer ${TOKEN}`,
+        'X-GitHub-Api-Version': '2022-11-28'
+      },
+      body: JSON.stringify({
+        ref: 'main',
+        inputs: {
+          giornata: giornata.toString()
+        }
+      })
+    });
+
+    if (!dispatchResponse.ok) {
+      console.warn(`Impossibile avviare il workflow automatico (Stato: ${dispatchResponse.status}). Tento comunque di leggere il file esistente...`);
+    } else {
+      console.log("Workflow avviato su GitHub! Attendo 12 secondi il completamento del download...");
+      // Aspetta 12 secondi affinché GitHub esegua il download in cloud
+      await new Promise(resolve => setTimeout(resolve, 12000));
+    }
+
+  } catch (err) {
+    console.error("Errore durante la chiamata a GitHub API:", err);
+  }
+
+  // 2. Legge il file CSV scaricato / aggiornato
   const timestamp = Date.now();
-  
   const percorsiPossibili = [
     `./giornata_${giornata}.csv?t=${timestamp}`,
     `./giornata ${giornata}.csv?t=${timestamp}`,
@@ -27,6 +62,10 @@ async function importaVotiFantapiu(giornata) {
   console.warn(`File CSV per la giornata ${giornata} non trovato su GitHub Pages.`);
   return [];
 }
+
+/**
+ * Legge un file CSV selezionato manualmente dall'utente dal PC
+ */
 function leggiCSVFileLocale(file, giornata) {
   return new Promise((resolve, reject) => {
     const reader = new FileReader();
