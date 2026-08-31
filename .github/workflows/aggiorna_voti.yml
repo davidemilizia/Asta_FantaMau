@@ -35,7 +35,7 @@ jobs:
 
       - name: Genera CSV giornata
         run: |
-          python scripts/aggiorna_voti.py "${{ github.event.inputs.giornata }}"
+          python aggiorna_voti.py "${{ github.event.inputs.giornata }}"
 
       - name: Verifica file creato
         run: |
