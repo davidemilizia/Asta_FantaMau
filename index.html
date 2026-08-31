@@ -324,43 +324,67 @@
       mostraVotiInTabella(voti, giornata);
     }
 
-    function mostraVotiInTabella(voti, giornata) {
-      const status = document.getElementById('statusVoti');
-      const tbody = document.getElementById('listaVotiBody');
+   function mostraVotiInTabella(voti, giornata) {
 
-      if (!voti || voti.length === 0) {
-        status.className = "text-sm font-semibold text-rose-400 block";
-        status.innerText = `❌ Nessun dato trovato per la Giornata ${giornata}`;
-        tbody.innerHTML = '<tr><td colspan="6" class="p-4 text-center text-slate-500">Nessun dato recuperato</td></tr>';
+    const status = document.getElementById('statusVoti');
+    const tbody = document.getElementById('listaVotiBody');
+
+    if (!voti || voti.length === 0) {
+
+        status.className =
+            "text-sm font-semibold text-rose-400 block";
+
+        status.innerText =
+            `❌ Nessun dato trovato per la Giornata ${giornata}`;
+
+        tbody.innerHTML =
+            '<tr><td colspan="6" class="p-4 text-center text-slate-500">Nessun dato recuperato</td></tr>';
+
         return;
-      }
-
-      status.className = "text-sm font-semibold text-emerald-400 block";
-      status.innerText = `✅ Caricati con successo ${voti.length} giocatori per la Giornata ${giornata}!`;
-
-      localStorage.setItem(`voti_giornata_${giornata}`, JSON.stringify(voti));
-
-      tbody.innerHTML = '';
-      voti.slice(0, 20).forEach(v => {
-        tbody.innerHTML += `
-          <tr class="hover:bg-slate-800/50">
-            <td class="p-2 text-white font-medium">${v.giocatore}</td>
-            <td class="p-2 text-slate-400">${v.squadra}</td>
-            <td class="p-2 font-bold ${getRuoloColor(v.ruolo)}">${v.ruolo}</td>
-            <td class="p-2 font-bold text-emerald-400">${v.voto}</td>
-            <td class="p-2 font-bold text-amber-400">${v.fv}</td>
-            <td class="p-2">${v.ass}</td>
-          </tr>
-        `;
-      });
-
-      if (voti.length > 20) {
-        tbody.innerHTML += `<tr><td colspan="6" class="p-2 text-center text-slate-400 italic">...e altri ${voti.length - 20} voti.</td></tr>`;
-      }
     }
-  </script>
 
-  <!-- Collegamento allo script separato voti.js -->
-  <script src="voti.js"></script>
-</body>
-</html>
+    status.className =
+        "text-sm font-semibold text-emerald-400 block";
+
+    status.innerText =
+        `✅ Caricati con successo ${voti.length} giocatori per la Giornata ${giornata}!`;
+
+    localStorage.setItem(
+        `voti_giornata_${giornata}`,
+        JSON.stringify(voti)
+    );
+
+    tbody.innerHTML = '';
+
+    voti.forEach(v => {
+
+        tbody.innerHTML += `
+            <tr class="hover:bg-slate-800/50">
+                <td class="p-2 text-white font-medium">
+                    ${v.giocatore}
+                </td>
+
+                <td class="p-2 text-slate-400">
+                    ${v.squadra}
+                </td>
+
+                <td class="p-2 font-bold ${getRuoloColor(v.ruolo)}">
+                    ${v.ruolo}
+                </td>
+
+                <td class="p-2 font-bold text-emerald-400">
+                    ${v.voto}
+                </td>
+
+                <td class="p-2 font-bold text-amber-400">
+                    ${v.fv}
+                </td>
+
+                <td class="p-2">
+                    ${v.ass}
+                </td>
+            </tr>
+        `;
+    });
+}
+``
