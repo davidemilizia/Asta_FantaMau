@@ -3,7 +3,7 @@
  */
 async function importaVotiFantapiu(giornata) {
   // CONFIGURAZIONE GITHUB
-  const TOKEN = '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'; // <-- Incolla qui il tuo token ghp_...
+  const TOKEN = 'ghp_3oZBNTyJ3BM1KchnvN1FaVss5pnpH03U91AD';
   const OWNER = 'davidemilitia';
   const REPO = 'Asta_FantaMau';
 
