@@ -259,29 +259,67 @@
     }
 
 function renderGiocatori() {
-  const tbody = document.getElementById('listaGiocatoriBody');
-  tbody.innerHTML = '';
 
-  legaConfig.giocatori.forEach(g => {
-        tbody.innerHTML += `
-          <tr>
-            <td class="p-2 font-bold ${getRuoloColor(g.ruolo)}">${g.ruolo}</td>
-            <td class="p-2 text-white font-medium">${g.nome}</td>
-            <td class="p-2 text-slate-400">${g.squadra}</td>
-            <td class="p-2">${g.quotazione}</td>
-          </tr>
-        `;
-      });
-    function getRuoloColor(ruolo) {
-      switch(String(ruolo).toUpperCase()) {
-        case 'P': return 'text-amber-400';
-        case 'D': return 'text-emerald-400';
-        case 'C': return 'text-blue-400';
-        case 'A': return 'text-rose-400';
-        default: return 'text-slate-400';
-      }
+    const tbody = document.getElementById('listaGiocatoriBody');
+
+    tbody.innerHTML = '';
+
+    if (legaConfig.giocatori.length === 0) {
+
+        tbody.innerHTML =
+            '<tr><td colspan="4" class="p-4 text-center text-slate-500">Nessun giocatore caricato</td></tr>';
+
+        return;
     }
 
+    legaConfig.giocatori.forEach(g => {
+
+        tbody.innerHTML += `
+            <tr>
+                <td class="p-2 font-bold ${getRuoloColor(g.ruolo)}">
+                    ${g.ruolo}
+                </td>
+
+                <td class="p-2 text-white font-medium">
+                    ${g.nome}
+                </td>
+
+                <td class="p-2 text-slate-400">
+                    ${g.squadra}
+                </td>
+
+                <td class="p-2">
+                    ${g.quotazione}
+                </td>
+            </tr>
+        `;
+
+    });
+
+}
+
+function getRuoloColor(ruolo) {
+
+    switch (String(ruolo).toUpperCase()) {
+
+        case 'P':
+            return 'text-amber-400';
+
+        case 'D':
+            return 'text-emerald-400';
+
+        case 'C':
+            return 'text-blue-400';
+
+        case 'A':
+            return 'text-rose-400';
+
+        default:
+            return 'text-slate-400';
+
+    }
+}
+`
     // --- SALVATAGGIO CONFIGURAZIONE ---
     function salvaLega() {
       localStorage.setItem('fantacalcio_config', JSON.stringify(legaConfig));
