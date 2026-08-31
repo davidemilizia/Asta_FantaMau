@@ -2,8 +2,8 @@
  * Scarica i voti della giornata invocando l'Action di GitHub dal sito web
  */
 async function importaVotiFantapiu(giornata) {
-  // CONFIGURAZIONE GITHUB (Metti qui il tuo token generato su GitHub)
-  const TOKEN = 'ghp_S9pDxMBZx7usS7E6J7cmV8em2agn2d4Wup1g';
+  // CONFIGURAZIONE GITHUB
+  const TOKEN = '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'; // <-- Incolla qui il tuo token ghp_...
   const OWNER = 'davidemilitia';
   const REPO = 'Asta_FantaMau';
 
