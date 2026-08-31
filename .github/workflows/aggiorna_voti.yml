@@ -23,7 +23,7 @@ jobs:
         if: github.event_name == 'workflow_dispatch'
         run: |
           mkdir -p dati_giornate
-          curl -sSL -A "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36" \
+          curl --max-time 15 -L -A "Mozilla/5.0 (Windows NT 10.0; Win64; x64)" \
           "https://www.fantapiu3.com/moduli/scarica-voti-excel-txt.php?giornata=${{ github.event.inputs.giornata }}&tipologia=excel" \
           -o "dati_giornate/giornata_${{ github.event.inputs.giornata }}.csv"
 
@@ -31,7 +31,7 @@ jobs:
         if: github.event_name == 'schedule'
         run: |
           mkdir -p dati_giornate
-          curl -sSL -A "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36" \
+          curl --max-time 15 -L -A "Mozilla/5.0 (Windows NT 10.0; Win64; x64)" \
           "https://www.fantapiu3.com/moduli/scarica-voti-excel-txt.php?giornata=1&tipologia=excel" \
           -o "dati_giornate/giornata_1.csv"
 
