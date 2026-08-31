@@ -258,13 +258,11 @@
       reader.readAsArrayBuffer(file);
     }
 
-    function renderGiocatori() {
-      const tbody = document.getElementById('listaGiocatoriBody');
-      tbody.innerHTML = '';
+function renderGiocatori() {
+  const tbody = document.getElementById('listaGiocatoriBody');
+  tbody.innerHTML = '';
 
-      const primi20 = legaConfig.giocatori.slice(0, 20);
-
-      primi20.forEach(g => {
+  legaConfig.giocatori.forEach(g => {
         tbody.innerHTML += `
           <tr>
             <td class="p-2 font-bold ${getRuoloColor(g.ruolo)}">${g.ruolo}</td>
