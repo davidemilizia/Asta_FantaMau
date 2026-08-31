@@ -1,640 +1,366 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Asta Fantacalcio - Live Dashboard & Budget</title>
-<style>
-  body {
-    font-family: Arial, sans-serif;
-    max-width: 1100px;
-    margin: 20px auto;
-    padding: 15px;
-    background-color: #f4f6f9;
-    color: #333;
-  }
-  h1 {
-    color: #1b5e20;
-    text-align: center;
-    margin-bottom: 20px;
-  }
-
-  /* Dashboard Budget Calcolatore */
-  .budget-board {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    background: white;
-    padding: 15px 20px;
-    border-radius: 10px;
-    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
-    margin-bottom: 20px;
-    flex-wrap: wrap;
-    gap: 15px;
-  }
-  .budget-box {
-    text-align: center;
-    flex: 1;
-    min-width: 110px;
-  }
-  .budget-box .label {
-    font-size: 11px;
-    text-transform: uppercase;
-    color: #666;
-    font-weight: bold;
-    margin-bottom: 5px;
-  }
-  .budget-box .value {
-    font-size: 26px;
-    font-weight: bold;
-    color: #1b5e20;
-  }
-  .budget-input {
-    width: 80px;
-    font-size: 22px;
-    font-weight: bold;
-    text-align: center;
-    border: 1px solid #ccc;
-    border-radius: 6px;
-    color: #1b5e20;
-  }
-
-  .actions {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 15px;
-    flex-wrap: wrap;
-    gap: 10px;
-  }
-  .search-box {
-    flex: 1;
-    min-width: 250px;
-  }
-  .search-box input {
-    width: 100%;
-    padding: 10px;
-    font-size: 14px;
-    border: 1px solid #ccc;
-    border-radius: 6px;
-  }
-  .buttons-group {
-    display: flex;
-    gap: 8px;
-    flex-wrap: wrap;
-  }
-  button {
-    background-color: #2e7d32;
-    color: white;
-    border: none;
-    padding: 10px 16px;
-    font-size: 14px;
-    border-radius: 6px;
-    cursor: pointer;
-    font-weight: bold;
-  }
-  button:hover {
-    background-color: #1b5e20;
-  }
-  button.secondary {
-    background-color: #546e7a;
-  }
-  button.secondary:hover {
-    background-color: #37474f;
-  }
-
-  /* Tabella con Header Fisso */
-  .table-container {
-    max-height: 65vh;
-    overflow-y: auto;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-    background: white;
-  }
-
-  table {
-    width: 100%;
-    border-collapse: collapse;
-    background: white;
-  }
-
-  th {
-    position: sticky;
-    top: 0;
-    background-color: #2e7d32;
-    color: white;
-    text-transform: uppercase;
-    font-size: 12px;
-    padding: 12px 10px;
-    text-align: left;
-    z-index: 10;
-    box-shadow: 0 2px 2px -1px rgba(0, 0, 0, 0.15);
-  }
-
-  td {
-    padding: 10px;
-    text-align: left;
-    border-bottom: 1px solid #e0e0e0;
-  }
-  tr:hover {
-    background-color: #f1f8e9;
-  }
-
-  /* Evidenziazione Giocatore Acquistato */
-  tr.riga-preso {
-    background-color: #e8f5e9 !important;
-  }
-  tr.riga-preso td {
-    font-weight: 500;
-  }
-
-  select.select-giocatore {
-    width: 100%;
-    padding: 6px;
-    font-size: 14px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    background-color: white;
-    cursor: pointer;
-  }
-  select.select-fascia {
-    padding: 6px;
-    font-size: 14px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    background-color: white;
-    cursor: pointer;
-  }
-  input.check-preso {
-    width: 20px;
-    height: 20px;
-    cursor: pointer;
-    accent-color: #2e7d32;
-  }
-  [contenteditable="true"] {
-    background-color: #fffde7;
-    outline: 2px dashed #cddc39;
-    padding: 4px;
-    border-radius: 4px;
-  }
-  .center { text-align: center; }
-  .right { text-align: right; }
-  
-  #messaggio {
-    text-align: center;
-    margin-top: 15px;
-    font-weight: bold;
-    color: #2e7d32;
-  }
-</style>
+  <link rel="shortcut icon" href="#">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gestione Fantacalcio - Impostazioni</title>
+  <!-- Tailwind CSS per la grafica -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- SheetJS per leggere file Excel direttamente nel browser -->
+  <script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js"></script>
 </head>
-<body>
+<body class="bg-slate-900 text-slate-100 min-h-screen p-4 md:p-8">
 
-<h1>🎯 Calciatori FANTAMAU/h1>
+  <div class="max-w-5xl mx-auto space-y-8">
+    
+    <!-- Intestazione -->
+    <header class="border-b border-slate-700 pb-4 flex justify-between items-center">
+      <div>
+        <h1 class="text-3xl font-bold text-emerald-400">Pannello Impostazioni Fantacalcio</h1>
+        <p class="text-slate-400 text-sm">Configurazione squadre, crediti e lista giocatori</p>
+      </div>
+      <button onclick="salvaLega()" class="bg-emerald-600 hover:bg-emerald-500 text-white font-semibold px-4 py-2 rounded-lg transition">
+        💾 Salva Configurazione
+      </button>
+    </header>
 
-<!-- CRUSCOTTO BUDGET -->
-<div class="budget-board">
-  <div class="budget-box">
-    <div class="label">Budget Iniziale</div>
-    <input type="number" id="budgetIniziale" class="budget-input" value="320" oninput="calcolaBudget(); salvaDati(false);">
+    <!-- Sezione 1: Configurazione Squadre -->
+    <section class="bg-slate-800 p-6 rounded-xl border border-slate-700 space-y-4">
+      <h2 class="text-xl font-semibold text-emerald-300 flex items-center gap-2">
+        ⚽ 1. Registro Squadre e Partecipanti
+      </h2>
+      
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-3 bg-slate-900/50 p-4 rounded-lg border border-slate-700">
+        <input type="text" id="nomeSquadra" placeholder="Nome Squadra" class="bg-slate-800 border border-slate-600 rounded px-3 py-2 text-sm text-white focus:outline-none focus:border-emerald-400">
+        <input type="text" id="nomePresidente" placeholder="Nome Presidente" class="bg-slate-800 border border-slate-600 rounded px-3 py-2 text-sm text-white focus:outline-none focus:border-emerald-400">
+        <input type="text" id="pinSquadra" placeholder="PIN / Password di sblocco" class="bg-slate-800 border border-slate-600 rounded px-3 py-2 text-sm text-white focus:outline-none focus:border-emerald-400">
+        <button onclick="aggiungiSquadra()" class="bg-blue-600 hover:bg-blue-500 text-white font-medium px-4 py-2 rounded transition text-sm">
+          + Aggiungi Squadra
+        </button>
+      </div>
+
+      <!-- Tabella Squadre Inserite -->
+      <div class="overflow-x-auto">
+        <table class="w-full text-left text-sm text-slate-300">
+          <thead class="bg-slate-700/50 uppercase text-xs text-slate-400">
+            <tr>
+              <th class="p-3">Squadra</th>
+              <th class="p-3">Presidente</th>
+              <th class="p-3">PIN</th>
+              <th class="p-3">Crediti Residui</th>
+              <th class="p-3 text-right">Azione</th>
+            </tr>
+          </thead>
+          <tbody id="listaSquadreBody" class="divide-y divide-slate-700">
+            <!-- Popolato via JS -->
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Sezione 2: Importazione Lista Giocatori (Excel / CSV) -->
+    <section class="bg-slate-800 p-6 rounded-xl border border-slate-700 space-y-4">
+      <h2 class="text-xl font-semibold text-emerald-300 flex items-center gap-2">
+        📋 2. Importazione Lista Giocatori (Excel / CSV)
+      </h2>
+      <p class="text-xs text-slate-400">Carica il file Excel ufficiale delle quotazioni (deve contenere le colonne: <i>Ruolo, Nome, Squadra, Quotazione/Valore</i>).</p>
+
+      <div class="flex items-center gap-4">
+        <input type="file" id="fileExcelGiocatori" accept=".xlsx, .xls, .csv" class="block w-full text-sm text-slate-400 file:mr-4 file:py-2 file:px-4 file:rounded-lg file:border-0 file:text-sm file:font-semibold file:bg-slate-700 file:text-emerald-400 hover:file:bg-slate-600 cursor-pointer">
+        <button onclick="caricaFileExcel()" class="bg-emerald-600 hover:bg-emerald-500 text-white font-medium px-4 py-2 rounded transition text-sm whitespace-nowrap">
+          📤 Importa Lista
+        </button>
+      </div>
+
+      <!-- Anteprima Importazione -->
+      <div id="statusImportazione" class="text-sm font-semibold text-emerald-400 hidden"></div>
+      
+      <div class="max-h-60 overflow-y-auto border border-slate-700 rounded-lg">
+        <table class="w-full text-left text-sm text-slate-300">
+          <thead class="bg-slate-700/50 uppercase text-xs text-slate-400 sticky top-0">
+            <tr>
+              <th class="p-2">Ruolo</th>
+              <th class="p-2">Nome</th>
+              <th class="p-2">Squadra A</th>
+              <th class="p-2">Quotazione</th>
+            </tr>
+          </thead>
+          <tbody id="listaGiocatoriBody" class="divide-y divide-slate-700 text-xs">
+            <tr><td colspan="4" class="p-4 text-center text-slate-500">Nessun giocatore caricato</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Sezione 3: Download / Importazione Voti Giornata -->
+    <section class="bg-slate-800 p-6 rounded-xl border border-slate-700 space-y-4">
+      <h2 class="text-xl font-semibold text-emerald-300 flex items-center gap-2">
+        📊 3. Scaricamento Voti Giornata
+      </h2>
+      <p class="text-xs text-slate-400">Scarica i voti dal server GitHub o seleziona direttamente il file CSV dal tuo computer.</p>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 bg-slate-900/50 p-4 rounded-lg border border-slate-700">
+        <!-- Opzione A: Caricamento automatico da GitHub -->
+        <div class="space-y-2 border-b md:border-b-0 md:border-r border-slate-700 pb-4 md:pb-0 md:pr-4">
+          <label class="text-xs font-semibold uppercase text-slate-400 block">Opzione A: Da GitHub</label>
+          <div class="flex items-center gap-2">
+            <label for="numGiornata" class="text-sm font-medium text-slate-300">Giornata:</label>
+            <input type="number" id="numGiornata" value="1" min="1" max="38" class="bg-slate-800 border border-slate-600 rounded px-3 py-1.5 w-20 text-center text-white focus:outline-none focus:border-emerald-400">
+            <button onclick="avviaDownloadVoti()" class="bg-indigo-600 hover:bg-indigo-500 text-white font-medium px-4 py-2 rounded transition text-sm">
+              📥 Scarica Voti
+            </button>
+          </div>
+        </div>
+
+        <!-- Opzione B: Upload manuale file CSV locale -->
+        <div class="space-y-2">
+          <label class="text-xs font-semibold uppercase text-slate-400 block">Opzione B: Carica CSV dal PC</label>
+          <div class="flex items-center gap-2">
+            <input type="file" id="fileCSVLocale" accept=".csv" class="block w-full text-xs text-slate-400 file:mr-2 file:py-1.5 file:px-3 file:rounded file:border-0 file:text-xs file:font-semibold file:bg-slate-700 file:text-emerald-400 hover:file:bg-slate-600 cursor-pointer">
+            <button onclick="caricaCSVManuale()" class="bg-emerald-600 hover:bg-emerald-500 text-white font-medium px-3 py-2 rounded transition text-sm whitespace-nowrap">
+              📤 Importa
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div id="statusVoti" class="text-sm font-semibold text-amber-400 hidden"></div>
+
+      <div class="max-h-60 overflow-y-auto border border-slate-700 rounded-lg">
+        <table class="w-full text-left text-sm text-slate-300">
+          <thead class="bg-slate-700/50 uppercase text-xs text-slate-400 sticky top-0">
+            <tr>
+              <th class="p-2">Giocatore</th>
+              <th class="p-2">Squadra</th>
+              <th class="p-2">R</th>
+              <th class="p-2">Voto</th>
+              <th class="p-2">FV</th>
+              <th class="p-2">Assist</th>
+            </tr>
+          </thead>
+          <tbody id="listaVotiBody" class="divide-y divide-slate-700 text-xs">
+            <tr><td colspan="6" class="p-4 text-center text-slate-500">Nessun voto scaricato per questa giornata</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
   </div>
-  <div class="budget-box">
-    <div class="label">Crediti Spesi</div>
-    <div class="value" id="statSpesi" style="color: #c62828;">0</div>
-  </div>
-  <div class="budget-box">
-    <div class="label">Rimanenti</div>
-    <div class="value" id="statRimanenti">320</div>
-  </div>
-  <div class="budget-box">
-    <div class="label">Acquistati</div>
-    <div class="value" id="statAcquistati" style="color: #1565c0;">0</div>
-  </div>
-</div>
 
-<div class="actions">
-  <div class="search-box">
-    <input type="text" id="inputRicerca" oninput="aggiornaFiltroTende()" placeholder="🔍 Filtra i giocatori nei menu (es. stanko)...">
-  </div>
-  <div class="buttons-group">
-    <button onclick="salvaDati(true)">💾 Salva Cloud</button>
-    <button class="secondary" onclick="ordinaPerRuoloEFascia()">↕️ Ordina</button>
-    <button class="secondary" onclick="aggiungiRigaPreset()">➕ Aggiungi</button>
-    <button class="secondary" onclick="esportaJson()">📥 Esporta</button>
-  </div>
-</div>
-
-<div class="table-container">
-  <table id="tabellaGiocatori">
-    <thead>
-      <tr>
-        <th class="center">Preso</th>
-        <th>Calciatore</th>
-        <th class="center">Ruolo</th>
-        <th>Squadra</th>
-        <th class="center">Fascia</th>
-        <th class="right">Max Target</th>
-        <th class="right">Prezzo Acquisto</th>
-        <th class="center">Azioni</th>
-      </tr>
-    </thead>
-    <tbody>
-      <!-- Righe dinamiche -->
-    </tbody>
-  </table>
-</div>
-
-<div id="messaggio"></div>
-
-<script>
-  // CONFIGURAZIONE JSONBIN.IO CLOUD
-// ==================== CONFIGURAZIONE CLOUD (FANTAMAU) ====================
-  const BIN_ID = '6a6ca339da38895dfea89701'; 
-  const MASTER_KEY = '$2a$10$JzW.Y6TFDuJ9ogAIsUNHduEI9d6Xn71X9QPfptrgh1/Zri49B9HOW';
-  // =========================================================================
-  const JSONBIN_URL = `https://api.jsonbin.io/v3/b/${BIN_ID}`;
-
-  let dbGiocatori = {};
-  let listaNomiGiocatori = [];
-
-  window.onload = function() {
-    mostraMessaggio("Caricamento listone in corso...", "#546e7a");
-
-    fetch('listone.json')
-      .then(response => {
-        if (!response.ok) throw new Error('Impossibile reperire listone.json');
-        return response.json();
-      })
-      .then(data => {
-        listaNomiGiocatori = processaDataJson(data);
-        listaNomiGiocatori.sort((a, b) => (a.nome || '').localeCompare(b.nome || ''));
-
-        listaNomiGiocatori.forEach((g, idx) => {
-          if (g.nome) {
-            const keyUnivoca = `${g.nome.trim()}|||${(g.squadra || '').trim()}|||${idx}`;
-            g.key = keyUnivoca;
-            
-            dbGiocatori[keyUnivoca] = { 
-              nome: g.nome.trim(),
-              ruolo: g.ruolo || "", 
-              squadra: g.squadra || "" 
-            };
-          }
-        });
-
-        caricaTabellaDaCloud();
-      })
-      .catch(error => {
-        console.error('Errore:', error);
-        mostraMessaggio("Attenzione: Impossibile caricare listone.json", "#c62828");
-      });
-  };
-
-  function processaDataJson(data) {
-    let arrayPiatto = [];
-    const mappatura = {
-      "portieri": "P", "difensori": "D", "centrocampisti": "C", "attaccanti": "A", "allenatori": "ALL"
+  <script>
+    // Stato dell'applicazione
+    let legaConfig = {
+      squadre: [],
+      giocatori: []
     };
 
-    if (Array.isArray(data)) {
-      return data.map(g => ({
-        nome: (g.nome || g.Calciatore || g.NOME || "").toString().trim(),
-        squadra: (g.squadra || g.Squadra || g.SQUADRA || "").toString().trim(),
-        ruolo: (g.ruolo || g.Ruolo || g.RUOLO || "").toString().trim()
-      }));
-    } else if (typeof data === 'object' && data !== null) {
-      for (let reparto in data) {
-        if (Array.isArray(data[reparto])) {
-          let rCode = mappatura[reparto.toLowerCase()] || reparto.toUpperCase();
-          data[reparto].forEach(g => {
-            arrayPiatto.push({
-              nome: (g.nome || g.Calciatore || g.NOME || "").toString().trim(),
-              squadra: (g.squadra || g.Squadra || g.SQUADRA || "").toString().trim(),
-              ruolo: (g.ruolo || g.Ruolo || g.RUOLO || rCode).toString().trim()
-            });
-          });
-        }
+    // Inizializzazione: Carica eventuali dati salvati in LocalStorage
+    window.onload = function() {
+      const datiSalvati = localStorage.getItem('fantacalcio_config');
+      if (datiSalvati) {
+        legaConfig = JSON.parse(datiSalvati);
+        renderSquadre();
+        renderGiocatori();
       }
+    };
+
+    // --- GESTIONE SQUADRE ---
+    function aggiungiSquadra() {
+      const nome = document.getElementById('nomeSquadra').value.trim();
+      const presidente = document.getElementById('nomePresidente').value.trim();
+      const pin = document.getElementById('pinSquadra').value.trim();
+
+      if (!nome || !presidente || !pin) {
+        alert('Compila tutti i campi della squadra!');
+        return;
+      }
+
+      legaConfig.squadre.push({
+        id: Date.now(),
+        nome: nome,
+        presidente: presidente,
+        pin: pin,
+        crediti: 500
+      });
+
+      document.getElementById('nomeSquadra').value = '';
+      document.getElementById('nomePresidente').value = '';
+      document.getElementById('pinSquadra').value = '';
+
+      renderSquadre();
     }
-    return arrayPiatto;
-  }
 
-  function caricaTabellaDaCloud() {
-    mostraMessaggio("Sincronizzazione col Cloud...", "#1b5e20");
+    function rimuoviSquadra(id) {
+      legaConfig.squadre = legaConfig.squadre.filter(s => s.id !== id);
+      renderSquadre();
+    }
 
-    fetch(`${JSONBIN_URL}/latest`, {
-      method: 'GET',
-      headers: { 'X-Master-Key': MASTER_KEY }
-    })
-    .then(response => {
-      if (!response.ok) throw new Error("Errore recupero cloud");
-      return response.json();
-    })
-    .then(dataCloud => {
-      disegnaTabella(dataCloud.record);
-      mostraMessaggio("Dati caricati dal Cloud con successo!", "#2e7d32", 2500);
-    })
-    .catch(err => {
-      console.warn("Cloud non raggiungibile. Recupero da memoria locale...", err);
-      const salvatoLocale = localStorage.getItem('fantacalcio_asta_dati');
-      if (salvatoLocale) {
-        try {
-          disegnaTabella(JSON.parse(salvatoLocale));
-          mostraMessaggio("Dati caricati dalla memoria locale", "#546e7a", 3000);
-        } catch (e) {
-          aggiungiRigaPreset();
-        }
-      } else {
-        aggiungiRigaPreset();
+    function renderSquadre() {
+      const tbody = document.getElementById('listaSquadreBody');
+      tbody.innerHTML = '';
+
+      if (legaConfig.squadre.length === 0) {
+        tbody.innerHTML = '<tr><td colspan="5" class="p-4 text-center text-slate-500">Nessuna squadra inserita</td></tr>';
+        return;
       }
-    });
-  }
 
-  function disegnaTabella(righeData) {
-    const tbody = document.querySelector('#tabellaGiocatori tbody');
-    if (!tbody) return;
-    tbody.innerHTML = "";
+      legaConfig.squadre.forEach(s => {
+        tbody.innerHTML += `
+          <tr class="hover:bg-slate-800/50">
+            <td class="p-3 font-semibold text-white">${s.nome}</td>
+            <td class="p-3">${s.presidente}</td>
+            <td class="p-3 font-mono text-emerald-400">${s.pin}</td>
+            <td class="p-3">${s.crediti}</td>
+            <td class="p-3 text-right">
+              <button onclick="rimuoviSquadra(${s.id})" class="text-rose-400 hover:text-rose-300 font-medium text-xs">Rimuovi</button>
+            </td>
+          </tr>
+        `;
+      });
+    }
 
-    if (Array.isArray(righeData) && righeData.length > 0) {
-      righeData.forEach(r => {
-        if (r.giocatore === "" && r.ruolo === "" && r.squadra === "" && righeData.length > 1) return;
+    // --- IMPORTAZIONE GIOCATORI DA EXCEL ---
+    function caricaFileExcel() {
+      const input = document.getElementById('fileExcelGiocatori');
+      if (!input.files.length) {
+        alert('Seleziona prima un file Excel!');
+        return;
+      }
+
+      const file = input.files[0];
+      const reader = new FileReader();
+
+      reader.onload = function(e) {
+        const data = new Uint8Array(e.target.result);
+        const workbook = XLSX.read(data, { type: 'array' });
         
-        // Gestione retrocompatibilità con i vecchi salvataggi
-        let prezzoAcquisto = r.prezzoAcquisto !== undefined ? r.prezzoAcquisto : (r.minCrediti || "");
-        let preso = r.preso !== undefined ? r.preso : false;
+        const sheetName = workbook.SheetNames[0];
+        const sheet = workbook.Sheets[sheetName];
+        
+        const json = XLSX.utils.sheet_to_json(sheet);
+        
+        legaConfig.giocatori = json.map((row, index) => ({
+          id: index + 1,
+          ruolo: row['R'] || row['Ruolo'] || row['R.'] || 'N/D',
+          nome: row['Nome'] || row['Calciatore'] || row['Giocatore'] || 'N/D',
+          squadra: row['Squadra'] || row['Club'] || 'N/D',
+          quotazione: row['Qt'] || row['Quotazione'] || row['Qt. A'] || 1
+        }));
 
-        creaRigaHtml(r.giocatore, r.ruolo, r.squadra, r.fascia, r.maxCrediti, prezzoAcquisto, preso);
-      });
-    } else {
-      aggiungiRigaPreset();
-    }
-    aggiornaFiltroTende();
-    calcolaBudget();
-  }
+        const status = document.getElementById('statusImportazione');
+        status.innerText = `✅ Importati con successo ${legaConfig.giocatori.length} giocatori!`;
+        status.classList.remove('hidden');
 
-  function calcolaBudget() {
-    const budgetIniziale = parseFloat(document.getElementById('budgetIniziale').value) || 0;
-    let spesi = 0;
-    let countAcquistati = 0;
-
-    const righe = document.querySelectorAll('#tabellaGiocatori tbody tr');
-    righe.forEach(r => {
-      const chk = r.querySelector('.check-preso');
-      const cellaAcquisto = r.querySelector('.acquisto-cell');
-      
-      if (chk && chk.checked) {
-        r.classList.add('riga-preso');
-        countAcquistati++;
-        let val = parseFloat(cellaAcquisto ? cellaAcquisto.innerText.trim() : 0);
-        if (!isNaN(val)) {
-          spesi += val;
-        }
-      } else {
-        r.classList.remove('riga-preso');
-      }
-    });
-
-    const rimanenti = budgetIniziale - spesi;
-
-    document.getElementById('statSpesi').innerText = spesi;
-    document.getElementById('statRimanenti').innerText = rimanenti;
-    document.getElementById('statAcquistati').innerText = countAcquistati;
-
-    const elRimanenti = document.getElementById('statRimanenti');
-    if (rimanenti < 0) {
-      elRimanenti.style.color = '#c62828';
-    } else {
-      elRimanenti.style.color = '#1b5e20';
-    }
-  }
-
-  function salvaDati(mostraAvviso = false) {
-    const righe = document.querySelectorAll('#tabellaGiocatori tbody tr');
-    const datiDaSalvare = [];
-
-    righe.forEach(r => {
-      const selectGiocatore = r.querySelector('.select-giocatore');
-      const selectFascia = r.querySelector('.select-fascia');
-      const chkPreso = r.querySelector('.check-preso');
-      const cols = r.querySelectorAll('td');
-
-      datiDaSalvare.push({
-        giocatore: selectGiocatore ? selectGiocatore.value : "",
-        ruolo: cols[2] ? cols[2].innerText.trim() : "",
-        squadra: cols[3] ? cols[3].innerText.trim() : "",
-        fascia: selectFascia ? selectFascia.value : "1",
-        maxCrediti: cols[5] ? cols[5].innerText.trim() : "",
-        prezzoAcquisto: cols[6] ? cols[6].innerText.trim() : "",
-        preso: chkPreso ? chkPreso.checked : false
-      });
-    });
-
-    localStorage.setItem('fantacalcio_asta_dati', JSON.stringify(datiDaSalvare));
-
-    if (mostraAvviso) mostraMessaggio("Salvataggio in Cloud...", "#1b5e20");
-
-    fetch(JSONBIN_URL, {
-      method: 'PUT',
-      headers: {
-        'Content-Type': 'application/json',
-        'X-Master-Key': MASTER_KEY
-      },
-      body: JSON.stringify(datiDaSalvare)
-    })
-    .then(res => {
-      if (!res.ok) throw new Error("Errore salvataggio Cloud");
-      if (mostraAvviso) mostraMessaggio("💾 Salvato in Cloud con successo!", "#2e7d32", 3000);
-    })
-    .catch(err => {
-      console.error(err);
-      if (mostraAvviso) mostraMessaggio("⚠️ Salvato solo in locale", "#c62828", 3000);
-    });
-  }
-
-  function ordinaPerRuoloEFascia() {
-    const righe = Array.from(document.querySelectorAll('#tabellaGiocatori tbody tr'));
-    
-    const dati = righe.map(r => {
-      const selectGiocatore = r.querySelector('.select-giocatore');
-      const selectFascia = r.querySelector('.select-fascia');
-      const chkPreso = r.querySelector('.check-preso');
-      const cols = r.querySelectorAll('td');
-
-      return {
-        giocatore: selectGiocatore ? selectGiocatore.value : "",
-        ruolo: cols[2] ? cols[2].innerText.trim() : "",
-        squadra: cols[3] ? cols[3].innerText.trim() : "",
-        fascia: selectFascia ? selectFascia.value : "1",
-        maxCrediti: cols[5] ? cols[5].innerText.trim() : "",
-        prezzoAcquisto: cols[6] ? cols[6].innerText.trim() : "",
-        preso: chkPreso ? chkPreso.checked : false
+        renderGiocatori();
       };
-    });
 
-    const prioritaRuolo = { 'P': 1, 'D': 2, 'C': 3, 'A': 4, 'ALL': 5 };
-
-    dati.sort((a, b) => {
-      const rA = prioritaRuolo[(a.ruolo || '').toUpperCase()] || 99;
-      const rB = prioritaRuolo[(b.ruolo || '').toUpperCase()] || 99;
-      if (rA !== rB) return rA - rB;
-      
-      const fA = parseInt(a.fascia) || 99;
-      const fB = parseInt(b.fascia) || 99;
-      if (fA !== fB) return fA - fB;
-
-      const maxA = parseFloat(a.maxCrediti) || 0;
-      const maxB = parseFloat(b.maxCrediti) || 0;
-      if (maxB !== maxA) return maxB - maxA;
-
-      return (a.giocatore || '').localeCompare(b.giocatore || '');
-    });
-
-    disegnaTabella(dati);
-    salvaDati(false);
-    mostraMessaggio("Ordinato per Ruolo e Fascia!", "#2e7d32", 2500);
-  }
-
-  function aggiungiRigaPreset() {
-    creaRigaHtml("", "", "", "1", "10", "", false);
-    salvaDati(false);
-  }
-
-  function creaRigaHtml(valoreSelezionato = "", ruolo = "", squadra = "", fascia = "1", max = "10", prezzoAcquisto = "", preso = false) {
-    const tbody = document.querySelector('#tabellaGiocatori tbody');
-    if (!tbody) return;
-
-    const nuovaRiga = document.createElement('tr');
-    if (preso) nuovaRiga.classList.add('riga-preso');
-    
-    nuovaRiga.innerHTML = `
-      <td class="center">
-        <input type="checkbox" class="check-preso" ${preso ? "checked" : ""} onchange="calcolaBudget(); salvaDati(false);">
-      </td>
-      <td>
-        <select class="select-giocatore" onchange="aggiornaDatiGiocatore(this)">
-        </select>
-      </td>
-      <td contenteditable="true" class="center ruolo-cell" oninput="salvaDati(false)">${ruolo}</td>
-      <td contenteditable="true" class="squadra-cell" oninput="salvaDati(false)">${squadra}</td>
-      <td class="center">
-        <select class="select-fascia" onchange="salvaDati(false)">
-          <option value="1" ${fascia === "1" ? "selected" : ""}>1</option>
-          <option value="2" ${fascia === "2" ? "selected" : ""}>2</option>
-          <option value="3" ${fascia === "3" ? "selected" : ""}>3</option>
-          <option value="4" ${fascia === "4" ? "selected" : ""}>4</option>
-        </select>
-      </td>
-      <td contenteditable="true" class="right" oninput="salvaDati(false)">${max}</td>
-      <td contenteditable="true" class="right acquisto-cell" oninput="calcolaBudget(); salvaDati(false);">${prezzoAcquisto}</td>
-      <td class="center"><button style="padding: 5px 10px; background-color: #c62828;" onclick="rimuoviRiga(this)">Elimina</button></td>
-    `;
-    tbody.appendChild(nuovaRiga);
-    
-    popolaSelectSingola(nuovaRiga.querySelector('.select-giocatore'), valoreSelezionato, squadra);
-  }
-
-  function escapeHtml(text) {
-    return text.replace(/"/g, '&quot;').replace(/'/g, '&#39;');
-  }
-
-  function popolaSelectSingola(selectElement, valoreSelezionato, rigaSquadra = "") {
-    if (!selectElement) return;
-    const inputRicerca = document.getElementById('inputRicerca');
-    const filtro = inputRicerca ? inputRicerca.value.toUpperCase().trim() : "";
-    let optionsHtml = '<option value="">-- Seleziona Giocatore --</option>';
-
-    listaNomiGiocatori.forEach(g => {
-      if (!g.nome) return;
-      const nomeUpper = g.nome.toUpperCase();
-      const squadraUpper = (g.squadra || "").toUpperCase();
-      const nomeMatch = nomeUpper.includes(filtro);
-      const squadraMatch = squadraUpper.includes(filtro);
-      
-      const eSelezionato = (g.key === valoreSelezionato) || 
-                           (valoreSelezionato.includes(g.nome) && g.squadra === rigaSquadra);
-
-      if (filtro === "" || nomeMatch || squadraMatch || eSelezionato) {
-        let selected = eSelezionato ? 'selected' : '';
-        let infoSquadra = g.squadra ? ` (${g.squadra}${g.ruolo ? ' - ' + g.ruolo : ''})` : '';
-        optionsHtml += `<option value="${escapeHtml(g.key)}" ${selected}>${g.nome}${infoSquadra}</option>`;
-      }
-    });
-
-    selectElement.innerHTML = optionsHtml;
-  }
-
-  function aggiornaFiltroTende() {
-    const righe = document.querySelectorAll('#tabellaGiocatori tbody tr');
-    righe.forEach(riga => {
-      const selectGiocatore = riga.querySelector('.select-giocatore');
-      const cellaSquadra = riga.querySelector('.squadra-cell');
-      const valoreCorrente = selectGiocatore ? selectGiocatore.value : "";
-      const squadraCorrente = cellaSquadra ? cellaSquadra.innerText.trim() : "";
-      popolaSelectSingola(selectGiocatore, valoreCorrente, squadraCorrente);
-    });
-  }
-
-  function rimuoviRiga(bottone) {
-    bottone.closest('tr').remove();
-    calcolaBudget();
-    salvaDati(false);
-  }
-
-  function aggiornaDatiGiocatore(selectElement) {
-    const keyScelta = selectElement.value;
-    const riga = selectElement.closest('tr');
-    const cellaRuolo = riga.querySelector('.ruolo-cell');
-    const cellaSquadra = riga.querySelector('.squadra-cell');
-
-    if (dbGiocatori[keyScelta]) {
-      if (cellaRuolo) cellaRuolo.innerText = dbGiocatori[keyScelta].ruolo || "";
-      if (cellaSquadra) cellaSquadra.innerText = dbGiocatori[keyScelta].squadra || "";
+      reader.readAsArrayBuffer(file);
     }
-    salvaDati(false);
-  }
 
-  function mostraMessaggio(testo, colore = '#2e7d32', durata = 0) {
-    const msg = document.getElementById('messaggio');
-    if (msg) {
-      msg.style.color = colore;
-      msg.innerText = testo;
-      if (durata > 0) {
-        setTimeout(() => { msg.innerText = ""; }, durata);
-      }
-    }
-  }
+    function renderGiocatori() {
+      const tbody = document.getElementById('listaGiocatoriBody');
+      tbody.innerHTML = '';
 
-  function esportaJson() {
-    const righe = document.querySelectorAll('#tabellaGiocatori tbody tr');
-    const dati = [];
-    righe.forEach(r => {
-      const selectGiocatore = r.querySelector('.select-giocatore');
-      const selectFascia = r.querySelector('.select-fascia');
-      const chkPreso = r.querySelector('.check-preso');
-      const cols = r.querySelectorAll('td');
-      const keyScelta = selectGiocatore ? selectGiocatore.value : "";
-      const infoGiocatore = dbGiocatori[keyScelta] || {};
+      const primi20 = legaConfig.giocatori.slice(0, 20);
 
-      dati.push({
-        giocatore: infoGiocatore.nome || keyScelta,
-        ruolo: cols[2] ? cols[2].innerText.trim() : "",
-        squadra: cols[3] ? cols[3].innerText.trim() : "",
-        fascia: selectFascia ? selectFascia.value : "1",
-        maxCrediti: cols[5] ? cols[5].innerText.trim() : "",
-        prezzoAcquisto: cols[6] ? cols[6].innerText.trim() : "",
-        preso: chkPreso ? chkPreso.checked : false
+      primi20.forEach(g => {
+        tbody.innerHTML += `
+          <tr>
+            <td class="p-2 font-bold ${getRuoloColor(g.ruolo)}">${g.ruolo}</td>
+            <td class="p-2 text-white font-medium">${g.nome}</td>
+            <td class="p-2 text-slate-400">${g.squadra}</td>
+            <td class="p-2">${g.quotazione}</td>
+          </tr>
+        `;
       });
-    });
 
-    const dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(dati, null, 2));
-    const downloadAnchor = document.createElement('a');
-    downloadAnchor.setAttribute("href", dataStr);
-    downloadAnchor.setAttribute("download", "asta_fantacalcio_live.json");
-    document.body.appendChild(downloadAnchor);
-    downloadAnchor.click();
-    downloadAnchor.remove();
-  }
-</script>
+      if (legaConfig.giocatori.length > 20) {
+        tbody.innerHTML += `<tr><td colspan="4" class="p-2 text-center text-slate-400 italic">...e altri ${legaConfig.giocatori.length - 20} giocatori.</td></tr>`;
+      }
+    }
 
+    function getRuoloColor(ruolo) {
+      switch(String(ruolo).toUpperCase()) {
+        case 'P': return 'text-amber-400';
+        case 'D': return 'text-emerald-400';
+        case 'C': return 'text-blue-400';
+        case 'A': return 'text-rose-400';
+        default: return 'text-slate-400';
+      }
+    }
+
+    // --- SALVATAGGIO CONFIGURAZIONE ---
+    function salvaLega() {
+      localStorage.setItem('fantacalcio_config', JSON.stringify(legaConfig));
+      alert('Configurazione della lega salvata con successo!');
+    }
+
+    // --- INTEGRAZIONE CON VOTI.JS ---
+    async function avviaDownloadVoti() {
+      const giornata = document.getElementById('numGiornata').value;
+      const status = document.getElementById('statusVoti');
+      const tbody = document.getElementById('listaVotiBody');
+
+      status.className = "text-sm font-semibold text-amber-400 block";
+      status.innerText = `⏳ Download voti Giornata ${giornata} in corso...`;
+      tbody.innerHTML = '<tr><td colspan="6" class="p-4 text-center text-slate-400">Caricamento...</td></tr>';
+
+      const voti = await importaVotiFantapiu(giornata);
+      mostraVotiInTabella(voti, giornata);
+    }
+
+    async function caricaCSVManuale() {
+      const input = document.getElementById('fileCSVLocale');
+      const giornata = document.getElementById('numGiornata').value;
+      
+      if (!input.files.length) {
+        alert('Seleziona prima un file CSV!');
+        return;
+      }
+
+      const file = input.files[0];
+      const voti = await leggiCSVFileLocale(file, giornata);
+      mostraVotiInTabella(voti, giornata);
+    }
+
+    function mostraVotiInTabella(voti, giornata) {
+      const status = document.getElementById('statusVoti');
+      const tbody = document.getElementById('listaVotiBody');
+
+      if (!voti || voti.length === 0) {
+        status.className = "text-sm font-semibold text-rose-400 block";
+        status.innerText = `❌ Nessun dato trovato per la Giornata ${giornata}`;
+        tbody.innerHTML = '<tr><td colspan="6" class="p-4 text-center text-slate-500">Nessun dato recuperato</td></tr>';
+        return;
+      }
+
+      status.className = "text-sm font-semibold text-emerald-400 block";
+      status.innerText = `✅ Caricati con successo ${voti.length} giocatori per la Giornata ${giornata}!`;
+
+      localStorage.setItem(`voti_giornata_${giornata}`, JSON.stringify(voti));
+
+      tbody.innerHTML = '';
+      voti.slice(0, 20).forEach(v => {
+        tbody.innerHTML += `
+          <tr class="hover:bg-slate-800/50">
+            <td class="p-2 text-white font-medium">${v.giocatore}</td>
+            <td class="p-2 text-slate-400">${v.squadra}</td>
+            <td class="p-2 font-bold ${getRuoloColor(v.ruolo)}">${v.ruolo}</td>
+            <td class="p-2 font-bold text-emerald-400">${v.voto}</td>
+            <td class="p-2 font-bold text-amber-400">${v.fv}</td>
+            <td class="p-2">${v.ass}</td>
+          </tr>
+        `;
+      });
+
+      if (voti.length > 20) {
+        tbody.innerHTML += `<tr><td colspan="6" class="p-2 text-center text-slate-400 italic">...e altri ${voti.length - 20} voti.</td></tr>`;
+      }
+    }
+  </script>
+
+  <!-- Collegamento allo script separato voti.js -->
+  <script src="voti.js"></script>
 </body>
 </html>
