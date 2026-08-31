@@ -19,23 +19,27 @@ jobs:
       - name: Checkout del Repository
         uses: actions/checkout@v4
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: '24'
-
-      - name: Scarica Voti (Se lanciato manualmente)
+      - name: Scarica Voti con cURL (Se lanciato manualmente)
         if: github.event_name == 'workflow_dispatch'
-        run: node fetch_voti.js ${{ github.event.inputs.giornata }}
+        run: |
+          mkdir -p dati_giornate
+          curl -sSL -A "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36" \
+          "https://www.fantapiu3.com/moduli/scarica-voti-excel-txt.php?giornata=${{ github.event.inputs.giornata }}&tipologia=excel" \
+          -o "dati_giornate/giornata_${{ github.event.inputs.giornata }}.csv"
 
-      - name: Scarica Voti (Se automatico via Schedule)
+      - name: Scarica Voti con cURL (Se automatico via Schedule)
         if: github.event_name == 'schedule'
-        run: node fetch_voti.js 1
+        run: |
+          mkdir -p dati_giornate
+          curl -sSL -A "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36" \
+          "https://www.fantapiu3.com/moduli/scarica-voti-excel-txt.php?giornata=1&tipologia=excel" \
+          -o "dati_giornate/giornata_1.csv"
 
       - name: Commit e Push dei nuovi CSV
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
           git add dati_giornate/
-          git commit -m "🤖 Auto-update voti CSV [skip ci]" || exit 0
+          git status
+          git commit -m "🤖 Auto-update voti CSV [skip ci]" || echo "Nessuna modifica da committare"
           git push
