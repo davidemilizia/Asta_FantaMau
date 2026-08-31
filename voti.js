@@ -57,19 +57,30 @@ function parsingCSVVoti(csvText) {
 
     for (let i = 1; i < righe.length; i++) {
 
-        const campi = righe[i]
-            .split(",")
-            .map(c => c.trim());
+        if (!righe[i].trim()) continue;
+
+        const campi = righe[i].match(
+            /(".*?"|[^",]+)(?=\s*,|\s*$)/g
+        );
+
+        if (!campi || campi.length < 14) {
+            continue;
+        }
+
+        const pulisci = (v) =>
+            String(v)
+                .replace(/^"/, "")
+                .replace(/"$/, "")
+                .trim();
 
         dati.push({
-            giocatore: campi[0] || "",
-            squadra: campi[1] || "",
-            ruolo: campi[2] || "",
-            fv: campi[3] || "",
-            voto: campi[4] || "",
-            ass: campi[11] || "0"
+            giocatore: pulisci(campi[0]),
+            squadra: pulisci(campi[1]),
+            ruolo: pulisci(campi[2]),
+            fv: pulisci(campi[3]),
+            voto: pulisci(campi[4]),
+            ass: pulisci(campi[11])
         });
-
     }
 
     return dati;
