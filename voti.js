@@ -1,11 +1,15 @@
 /**
- * Legge il file CSV della giornata provando sia con "_" che con spazio " "
+ * Legge il file CSV della giornata provando sia nella root che nella cartella dati_giornate
  */
 async function importaVotiFantapiu(giornata) {
-  // Prova prima con l'underscore (giornata_1.csv), poi con lo spazio (giornata 1.csv)
+  // Aggiungiamo il timestamp ?t= per forzare l'aggiornamento senza cache del browser
+  const timestamp = Date.now();
+  
   const percorsiPossibili = [
-    `./dati_giornate/giornata_${giornata}.csv`,
-    `./dati_giornate/giornata ${giornata}.csv`
+    `./giornata_${giornata}.csv?t=${timestamp}`,
+    `./giornata ${giornata}.csv?t=${timestamp}`,
+    `./dati_giornate/giornata_${giornata}.csv?t=${timestamp}`,
+    `./dati_giornate/giornata ${giornata}.csv?t=${timestamp}`
   ];
 
   for (const filePath of percorsiPossibili) {
@@ -23,10 +27,6 @@ async function importaVotiFantapiu(giornata) {
   console.warn(`File CSV per la giornata ${giornata} non trovato su GitHub Pages.`);
   return [];
 }
-
-/**
- * Legge un file CSV selezionato manualmente dall'utente dal PC
- */
 function leggiCSVFileLocale(file, giornata) {
   return new Promise((resolve, reject) => {
     const reader = new FileReader();
