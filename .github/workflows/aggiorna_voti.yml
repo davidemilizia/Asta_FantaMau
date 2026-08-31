@@ -39,9 +39,6 @@ jobs:
 
       - name: Verifica file creato
         run: |
-          ls
-                - name: Verifica file creato
-        run: |
           ls -la dati_giornate
 
       - name: Commit e Push
