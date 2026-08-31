@@ -22,24 +22,22 @@ jobs:
       - name: Scarica Voti con cURL (Se lanciato manualmente)
         if: github.event_name == 'workflow_dispatch'
         run: |
-          mkdir -p dati_giornate
           curl --max-time 15 -L -A "Mozilla/5.0 (Windows NT 10.0; Win64; x64)" \
           "https://www.fantapiu3.com/moduli/scarica-voti-excel-txt.php?giornata=${{ github.event.inputs.giornata }}&tipologia=excel" \
-          -o "dati_giornate/giornata_${{ github.event.inputs.giornata }}.csv"
+          -o "giornata_${{ github.event.inputs.giornata }}.csv"
 
       - name: Scarica Voti con cURL (Se automatico via Schedule)
         if: github.event_name == 'schedule'
         run: |
-          mkdir -p dati_giornate
           curl --max-time 15 -L -A "Mozilla/5.0 (Windows NT 10.0; Win64; x64)" \
           "https://www.fantapiu3.com/moduli/scarica-voti-excel-txt.php?giornata=1&tipologia=excel" \
-          -o "dati_giornate/giornata_1.csv"
+          -o "giornata_1.csv"
 
       - name: Commit e Push dei nuovi CSV
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
-          git add dati_giornate/
+          git add giornata_*.csv
           git status
           git commit -m "🤖 Auto-update voti CSV [skip ci]" || echo "Nessuna modifica da committare"
           git push
