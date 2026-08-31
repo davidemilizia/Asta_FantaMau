@@ -1,1 +1,41 @@
+name: Aggiornamento Automatico Voti
 
+on:
+  workflow_dispatch:
+    inputs:
+      giornata:
+        description: 'Numero della giornata da scaricare'
+        required: true
+        default: '1'
+
+  schedule:
+    - cron: '0 23 * * 1,2'
+
+jobs:
+  update-voti:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout del Repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+
+      - name: Scarica Voti (Se lanciato manualmente)
+        if: github.event_name == 'workflow_dispatch'
+        run: node fetch_voti.js ${{ github.event.inputs.giornata }}
+
+      - name: Scarica Voti (Se automatico via Schedule)
+        if: github.event_name == 'schedule'
+        run: node fetch_voti.js 1
+
+      - name: Commit e Push dei nuovi CSV
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add dati_giornate/
+          git commit -m "🤖 Auto-update voti CSV [skip ci]" || exit 0
+          git push
