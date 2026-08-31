@@ -19,25 +19,33 @@ jobs:
       - name: Checkout del Repository
         uses: actions/checkout@v4
 
-      - name: Scarica Voti con cURL (Se lanciato manualmente)
+      # 1. Se lanciato MANUALMENTE (workflow_dispatch)
+      - name: Scarica Voti Manuale
         if: github.event_name == 'workflow_dispatch'
         run: |
-          curl --max-time 15 -L -A "Mozilla/5.0 (Windows NT 10.0; Win64; x64)" \
-          "https://www.fantapiu3.com/moduli/scarica-voti-excel-txt.php?giornata=${{ github.event.inputs.giornata }}&tipologia=excel" \
-          -o "giornata_${{ github.event.inputs.giornata }}.csv"
+          echo "GIORNATA_TARGET=${{ github.event.inputs.giornata }}" >> $GITHUB_ENV
 
-      - name: Scarica Voti con cURL (Se automatico via Schedule)
+      # 2. Se parte in AUTOMATICO (schedule)
+      - name: Calcola Giornata Automatica
         if: github.event_name == 'schedule'
         run: |
-          curl --max-time 15 -L -A "Mozilla/5.0 (Windows NT 10.0; Win64; x64)" \
-          "https://www.fantapiu3.com/moduli/scarica-voti-excel-txt.php?giornata=1&tipologia=excel" \
-          -o "giornata_1.csv"
+          # Esempio: imposta la giornata corrente di campionato
+          echo "GIORNATA_TARGET=1" >> $GITHUB_ENV
 
-      - name: Commit e Push dei nuovi CSV
+      # 3. Scarica e Sovrascrivi il file CSV nella root
+      - name: Download CSV Voti
+        run: |
+          echo "⏳ Scaricamento voti per la Giornata $GIORNATA_TARGET..."
+          curl --max-time 15 -L -A "Mozilla/5.0 (Windows NT 10.0; Win64; x64)" \
+          "https://www.fantapiu3.com/moduli/scarica-voti-excel-txt.php?giornata=${GIORNATA_TARGET}&tipologia=excel" \
+          -o "giornata_${GIORNATA_TARGET}.csv"
+
+      # 4. Salva le modifiche su GitHub
+      - name: Commit e Push su GitHub
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
           git add giornata_*.csv
           git status
-          git commit -m "🤖 Auto-update voti CSV [skip ci]" || echo "Nessuna modifica da committare"
+          git commit -m "🤖 Auto-update voti giornata $GIORNATA_TARGET [skip ci]" || echo "Nessuna modifica da committare"
           git push
