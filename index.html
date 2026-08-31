@@ -272,12 +272,6 @@ function renderGiocatori() {
           </tr>
         `;
       });
-
-      if (legaConfig.giocatori.length > 20) {
-        tbody.innerHTML += `<tr><td colspan="4" class="p-2 text-center text-slate-400 italic">...e altri ${legaConfig.giocatori.length - 20} giocatori.</td></tr>`;
-      }
-    }
-
     function getRuoloColor(ruolo) {
       switch(String(ruolo).toUpperCase()) {
         case 'P': return 'text-amber-400';
