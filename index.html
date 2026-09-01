@@ -58,7 +58,31 @@
         </table>
       </div>
     </section>
+<section class="bg-slate-800 p-6 rounded-xl border border-slate-700 space-y-4">
 
+  <h2 class="text-xl font-semibold text-emerald-300">
+    👥 Associazione Rosa
+  </h2>
+
+  <select
+      id="squadraRosa"
+      class="w-full bg-slate-800 border border-slate-600 rounded px-3 py-2 text-white">
+  </select>
+
+  <textarea
+      id="textareaRosa"
+      rows="12"
+      placeholder="Un giocatore per riga..."
+      class="w-full bg-slate-800 border border-slate-600 rounded px-3 py-2 text-white">
+  </textarea>
+
+  <button
+      onclick="salvaRosa()"
+      class="bg-emerald-600 hover:bg-emerald-500 text-white px-4 py-2 rounded">
+      💾 Salva Rosa
+  </button>
+
+</section>
     <!-- Sezione 2: Importazione Lista Giocatori (Excel / CSV) -->
     <section class="bg-slate-800 p-6 rounded-xl border border-slate-700 space-y-4">
       <h2 class="text-xl font-semibold text-emerald-300 flex items-center gap-2">
