@@ -453,7 +453,9 @@ const ruolo =
 
     tbody.innerHTML = '';
 
-    const filtrati = votiCorrenti.filter(v =>
+    const filtrati = votiCorrenti.filter(v => {
+
+    const matchTesto =
 
         String(v.giocatore)
             .toLowerCase()
@@ -463,8 +465,19 @@ const ruolo =
 
         String(v.squadra)
             .toLowerCase()
-            .includes(testo)
-    );
+            .includes(testo);
+
+    const matchRuolo =
+
+        ruolo === ""
+
+        ||
+
+        String(v.ruolo) === ruolo;
+
+    return matchTesto && matchRuolo;
+
+});
 
     filtrati.forEach(v => {
 
