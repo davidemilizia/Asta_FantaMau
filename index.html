@@ -528,11 +528,24 @@ const ruolo =
     const testo =
         document.getElementById('textareaRosa').value;
 
-    const giocatori =
-        testo
-        .split('\n')
-        .map(g => g.trim())
-        .filter(g => g);
+   const ruoli = ['POR', 'DIF', 'CEN', 'ATT'];
+
+const squadre = [
+    'ATA','BOL','CAG','COM','CRE','EMP',
+    'FIO','GEN','INT','JUV','LAZ','LEC',
+    'MIL','MON','NAP','PAR','PIS','ROM',
+    'SAS','TOR','UDI','VEN'
+];
+
+const giocatori =
+    testo
+      .split('\n')
+      .map(r => r.trim())
+      .filter(r =>
+          r &&
+          !ruoli.includes(r) &&
+          !squadre.includes(r)
+      );
 
     legaConfig.rose[squadra] = giocatori;
 
