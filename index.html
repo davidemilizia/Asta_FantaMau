@@ -201,14 +201,25 @@
 };
 let votiCorrenti = [];
     // Inizializzazione: Carica eventuali dati salvati in LocalStorage
-    window.onload = function() {
-      const datiSalvati = localStorage.getItem('fantacalcio_config');
-      if (datiSalvati) {
-        legaConfig = JSON.parse(datiSalvati);
-        renderSquadre();
-        renderGiocatori();
-      }
-    };
+   window.onload = function() {
+
+  const datiSalvati =
+    localStorage.getItem('fantacalcio_config');
+
+  if (datiSalvati) {
+
+    legaConfig = JSON.parse(datiSalvati);
+
+    if (!legaConfig.rose) {
+      legaConfig.rose = {};
+    }
+
+    renderSquadre();
+    renderGiocatori();
+
+  }
+
+};
 
     // --- GESTIONE SQUADRE ---
     function aggiungiSquadra() {
