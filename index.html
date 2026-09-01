@@ -126,7 +126,14 @@
       </div>
 
       <div id="statusVoti" class="text-sm font-semibold text-amber-400 hidden"></div>
-
+<div class="mt-3">
+  <input
+      type="text"
+      id="filtroVoti"
+      placeholder="🔍 Cerca giocatore o squadra..."
+      onkeyup="filtraVoti()"
+      class="w-full bg-slate-800 border border-slate-600 rounded px-3 py-2 text-white">
+</div>
       <div class="max-h-60 overflow-y-auto border border-slate-700 rounded-lg">
         <table class="w-full text-left text-sm text-slate-300">
           <thead class="bg-slate-700/50 uppercase text-xs text-slate-400 sticky top-0">
