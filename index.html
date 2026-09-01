@@ -423,6 +423,49 @@ function getRuoloColor(ruolo) {
         `;
     });
 }
+function filtraVoti() {
+
+    const testo =
+        document
+            .getElementById('filtroVoti')
+            .value
+            .toLowerCase();
+
+    const tbody =
+        document.getElementById('listaVotiBody');
+
+    tbody.innerHTML = '';
+
+    const filtrati = votiCorrenti.filter(v =>
+
+        String(v.giocatore)
+            .toLowerCase()
+            .includes(testo)
+
+        ||
+
+        String(v.squadra)
+            .toLowerCase()
+            .includes(testo)
+    );
+
+    filtrati.forEach(v => {
+
+        tbody.innerHTML += `
+            <tr class="hover:bg-slate-800/50">
+                <td class="p-2 text-white font-medium">${v.giocatore}</td>
+                <td class="p-2 text-slate-400">${v.squadra}</td>
+                <td class="p-2 font-bold ${getRuoloColor(v.ruolo)}">${v.ruolo}</td>
+                <td class="p-2 font-bold text-emerald-400">${v.voto}</td>
+                <td class="p-2 font-bold text-amber-400">${v.fv}</td>
+                <td class="p-2">${v.ass}</td>
+            </tr>
+        `;
+
+    });
+
+}
+    
   </script>
 
   <script src="voti.js"></script>
