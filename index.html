@@ -519,7 +519,49 @@ const ruolo =
     });
 
 }
-    
+    function salvaRosa() {
+
+    const squadra =
+        document.getElementById('squadraRosa').value;
+
+    const testo =
+        document.getElementById('textareaRosa').value;
+
+    const giocatori =
+        testo
+        .split('\n')
+        .map(g => g.trim())
+        .filter(g => g);
+
+    legaConfig.rose[squadra] = giocatori;
+
+    salvaLega();
+
+    alert(
+        `Salvati ${giocatori.length} giocatori per ${squadra}`
+    );
+
+}
+   function aggiornaSelectRose() {
+
+    const select =
+        document.getElementById('squadraRosa');
+
+    if (!select) return;
+
+    select.innerHTML = '';
+
+    legaConfig.squadre.forEach(s => {
+
+        select.innerHTML += `
+            <option value="${s.nome}">
+                ${s.nome}
+            </option>
+        `;
+
+    });
+
+} 
   </script>
 
   <script src="voti.js"></script>
